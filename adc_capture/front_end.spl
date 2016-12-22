@@ -1,0 +1,11 @@
+[Inputs]
+dclk
+=d_p[5:0]=
+=d_n[5:0]=
+[Outputs]
+=dat_chA[5:0]=
+=dat_chB[5:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel front_end
+

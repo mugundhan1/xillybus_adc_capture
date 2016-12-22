@@ -1,0 +1,42 @@
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.xst" -ofn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.syr" 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.xst" -ofn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc sing_chan.ucf -p xc5vlx110t-ff1136-1 sing_chan_cap.ngc sing_chan_cap.ngd  
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.xst" -ofn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc sing_chan.ucf -p xc5vlx110t-ff1136-1 sing_chan_cap.ngc sing_chan_cap.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o sing_chan_cap_map.ncd sing_chan_cap.ngd sing_chan_cap.pcf 
+par -w -intstyle ise -ol high -mt off sing_chan_cap_map.ncd sing_chan_cap.ncd sing_chan_cap.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml sing_chan_cap.twx sing_chan_cap.ncd -o sing_chan_cap.twr sing_chan_cap.pcf -ucf sing_chan.ucf 
+bitgen -intstyle ise -f sing_chan_cap.ut sing_chan_cap.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.xst" -ofn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc sing_chan.ucf -p xc5vlx110t-ff1136-1 sing_chan_cap.ngc sing_chan_cap.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o sing_chan_cap_map.ncd sing_chan_cap.ngd sing_chan_cap.pcf 
+par -w -intstyle ise -ol high -mt off sing_chan_cap_map.ncd sing_chan_cap.ncd sing_chan_cap.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml sing_chan_cap.twx sing_chan_cap.ncd -o sing_chan_cap.twr sing_chan_cap.pcf -ucf sing_chan.ucf 
+bitgen -intstyle ise -f sing_chan_cap.ut sing_chan_cap.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.xst" -ofn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc sing_chan.ucf -p xc5vlx110t-ff1136-1 sing_chan_cap.ngc sing_chan_cap.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o sing_chan_cap_map.ncd sing_chan_cap.ngd sing_chan_cap.pcf 
+par -w -intstyle ise -ol high -mt off sing_chan_cap_map.ncd sing_chan_cap.ncd sing_chan_cap.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml sing_chan_cap.twx sing_chan_cap.ncd -o sing_chan_cap.twr sing_chan_cap.pcf -ucf sing_chan.ucf 
+bitgen -intstyle ise -f sing_chan_cap.ut sing_chan_cap.ncd 
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o sing_chan_cap_map.ncd sing_chan_cap.ngd sing_chan_cap.pcf 
+par -w -intstyle ise -ol high -mt off sing_chan_cap_map.ncd sing_chan_cap.ncd sing_chan_cap.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml sing_chan_cap.twx sing_chan_cap.ncd -o sing_chan_cap.twr sing_chan_cap.pcf -ucf sing_chan.ucf 
+bitgen -intstyle ise -f sing_chan_cap.ut sing_chan_cap.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.xst" -ofn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc sing_chan.ucf -p xc5vlx110t-ff1136-1 sing_chan_cap.ngc sing_chan_cap.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o sing_chan_cap_map.ncd sing_chan_cap.ngd sing_chan_cap.pcf 
+par -w -intstyle ise -ol high -mt off sing_chan_cap_map.ncd sing_chan_cap.ncd sing_chan_cap.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml sing_chan_cap.twx sing_chan_cap.ncd -o sing_chan_cap.twr sing_chan_cap.pcf -ucf sing_chan.ucf 
+bitgen -intstyle ise -f sing_chan_cap.ut sing_chan_cap.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.xst" -ofn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc sing_chan.ucf -p xc5vlx110t-ff1136-1 sing_chan_cap.ngc sing_chan_cap.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o sing_chan_cap_map.ncd sing_chan_cap.ngd sing_chan_cap.pcf 
+par -w -intstyle ise -ol high -mt off sing_chan_cap_map.ncd sing_chan_cap.ncd sing_chan_cap.pcf 
+bitgen -intstyle ise -f sing_chan_cap.ut sing_chan_cap.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.xst" -ofn "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc sing_chan.ucf -p xc5vlx110t-ff1136-1 sing_chan_cap.ngc sing_chan_cap.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o sing_chan_cap_map.ncd sing_chan_cap.ngd sing_chan_cap.pcf 
+par -w -intstyle ise -ol high -mt off sing_chan_cap_map.ncd sing_chan_cap.ncd sing_chan_cap.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml sing_chan_cap.twx sing_chan_cap.ncd -o sing_chan_cap.twr sing_chan_cap.pcf -ucf sing_chan.ucf 
+bitgen -intstyle ise -f sing_chan_cap.ut sing_chan_cap.ncd 

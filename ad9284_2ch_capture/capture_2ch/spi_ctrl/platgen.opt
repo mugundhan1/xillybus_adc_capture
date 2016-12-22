@@ -1,0 +1,13 @@
+-p
+xc5vlx110tff1136-1
+-lang
+verilog
+-intstyle
+ise
+-toplevel
+no
+-ti
+spi_ctrl_i
+-msg
+__xps/ise/xmsgprops.lst
+spi_ctrl.mhs

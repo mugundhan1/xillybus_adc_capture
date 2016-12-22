@@ -1,0 +1,23 @@
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.xst" -ofn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.syr" 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.xst" -ofn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.syr" 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.xst" -ofn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.syr" 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.xst" -ofn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.syr" 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.xst" -ofn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.syr" 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.xst" -ofn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 capture_2ch_top.ngc capture_2ch_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o capture_2ch_top_map.ncd capture_2ch_top.ngd capture_2ch_top.pcf 
+par -w -intstyle ise -ol high -mt off capture_2ch_top_map.ncd capture_2ch_top.ncd capture_2ch_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml capture_2ch_top.twx capture_2ch_top.ncd -o capture_2ch_top.twr capture_2ch_top.pcf -ucf top.ucf 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.xst" -ofn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 capture_2ch_top.ngc capture_2ch_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o capture_2ch_top_map.ncd capture_2ch_top.ngd capture_2ch_top.pcf 
+par -w -intstyle ise -ol high -mt off capture_2ch_top_map.ncd capture_2ch_top.ncd capture_2ch_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml capture_2ch_top.twx capture_2ch_top.ncd -o capture_2ch_top.twr capture_2ch_top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f capture_2ch_top.ut capture_2ch_top.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.xst" -ofn "E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 capture_2ch_top.ngc capture_2ch_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 capture_2ch_top.ngc capture_2ch_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o capture_2ch_top_map.ncd capture_2ch_top.ngd capture_2ch_top.pcf 
+par -w -intstyle ise -ol high -mt off capture_2ch_top_map.ncd capture_2ch_top.ncd capture_2ch_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml capture_2ch_top.twx capture_2ch_top.ncd -o capture_2ch_top.twr capture_2ch_top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f capture_2ch_top.ut capture_2ch_top.ncd 

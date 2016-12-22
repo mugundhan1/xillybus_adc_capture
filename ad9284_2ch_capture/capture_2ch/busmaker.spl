@@ -1,0 +1,10 @@
+[Inputs]
+d1
+d0
+=din[5:0]=
+[Outputs]
+=dout[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel busmaker
+

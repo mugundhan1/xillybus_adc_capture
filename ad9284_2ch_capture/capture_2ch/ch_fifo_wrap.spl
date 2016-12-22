@@ -1,0 +1,15 @@
+[Inputs]
+rst
+wr_clk
+rd_clk
+wr_en
+rd_en
+=din[7:0]=
+[Outputs]
+full
+empty
+=dout[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel ch_fifo_wrap
+

@@ -1,0 +1,2 @@
+vhdl lmb_v10_v2_00_b "E:\Xilinx\14.5\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\hdl\vhdl\lmb_v10.vhd"
+vhdl work "E:\xillybus_adc_capture\ad9284_2ch_capture\capture_2ch\spi_ctrl\hdl\spi_ctrl_ilmb_wrapper.vhd"

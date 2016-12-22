@@ -1,0 +1,17 @@
+Running: E:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/xillybus_adc_capture/adc_capture/byte_reorder_isim_beh.exe -prj E:/xillybus_adc_capture/adc_capture/byte_reorder_beh.prj work.byte_reorder work.glbl 
+ISim P.58f (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/xillybus_adc_capture/adc_capture/byte_reorder.v" into library work
+Analyzing Verilog file "E:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module byte_reorder
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 2 Verilog Units
+Built simulation executable E:/xillybus_adc_capture/adc_capture/byte_reorder_isim_beh.exe
+Fuse Memory Usage: 26872 KB
+Fuse CPU Usage: 998 ms

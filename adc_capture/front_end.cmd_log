@@ -1,0 +1,18 @@
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/front_end.v -lang verilog -prj adc_capture -o front_end.spl -module front_end -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 front_end.spl E:/xillybus_adc_capture/adc_capture/front_end.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/front_end.v -lang verilog -prj adc_capture -o front_end.spl -module front_end -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 front_end.spl E:/xillybus_adc_capture/adc_capture/front_end.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/front_end.v -lang verilog -prj adc_capture -o front_end.spl -module front_end -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 front_end.spl E:/xillybus_adc_capture/adc_capture/front_end.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/front_end.v -lang verilog -prj adc_capture -o front_end.spl -module front_end -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 front_end.spl E:/xillybus_adc_capture/adc_capture/front_end.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/front_end.v -lang verilog -prj adc_capture -o front_end.spl -module front_end -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 front_end.spl E:/xillybus_adc_capture/adc_capture/front_end.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/front_end.v -lang verilog -prj adc_capture -o front_end.spl -module front_end -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 front_end.spl E:/xillybus_adc_capture/adc_capture/front_end.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/front_end.v -lang verilog -prj adc_capture -o front_end.spl -module front_end -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 front_end.spl E:/xillybus_adc_capture/adc_capture/front_end.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/front_end.v -lang verilog -prj adc_capture -o front_end.spl -module front_end -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 front_end.spl E:/xillybus_adc_capture/adc_capture/front_end.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/front_end_2.v -lang verilog -prj adc_capture -o front_end.spl -module front_end -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 front_end.spl E:/xillybus_adc_capture/adc_capture/front_end.sym 

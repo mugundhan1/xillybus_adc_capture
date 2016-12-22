@@ -1,0 +1,4 @@
+vhdtdtfi -lib work E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/ad9284_fe.v -lang verilog -prj capture_2ch -o ad9284_fe.spl -module ad9284_fe -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 ad9284_fe.spl E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/ad9284_fe.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/ad9284_fe.v -lang verilog -prj capture_2ch -o ad9284_fe.spl -module ad9284_fe -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 ad9284_fe.spl E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/ad9284_fe.sym 

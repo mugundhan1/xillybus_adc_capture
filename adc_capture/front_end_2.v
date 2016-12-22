@@ -1,0 +1,45 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    09:56:20 05/26/2016 
+// Design Name: 
+// Module Name:    front_end 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module front_end( input [5:0] d_p,d_n,
+input dclk,
+output [5:0] dat_chA, dat_chB
+    );
+wire [5:0] data_s;
+//wire [5:0] data_ch1,data_ch2;
+
+IBUFDS IBUFDS_inst [5:0] (
+.O(data_s), // Buffer output
+.I(d_p), // Diff_p buffer input (connect directly to top-level port)
+.IB(d_n) // Diff_n buffer input (connect directly to top-level port)
+);
+
+IDDR #(
+.DDR_CLK_EDGE("SAME_EDGE_PIPELINED")) IDDR_inst [5:0] (
+.Q1(dat_chA),
+.Q2(dat_chB),
+.C(dclk),
+.CE(1'b1),
+.D(data_s),
+.R(1'b0),
+.S(1'b0)
+);
+
+endmodule

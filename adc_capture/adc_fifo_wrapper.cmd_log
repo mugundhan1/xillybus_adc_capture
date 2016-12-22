@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/adc_fifo_wrapper.v -lang verilog -prj adc_capture -o adc_fifo_wrapper.spl -module adc_fifo_wrapper -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 adc_fifo_wrapper.spl E:/xillybus_adc_capture/adc_capture/adc_fifo_wrapper.sym 

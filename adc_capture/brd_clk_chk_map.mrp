@@ -1,0 +1,3251 @@
+Release 14.5 Map P.58f (nt64)
+Xilinx Mapping Report File for Design 'brd_clk_chk'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol
+high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr
+off -lc off -power off -o brd_clk_chk_map.ncd brd_clk_chk.ngd brd_clk_chk.pcf 
+Target Device  : xc5vlx110t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.55 $
+Mapped Date    : Thu Jun 02 12:05:32 2016
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   45
+Slice Logic Utilization:
+  Number of Slice Registers:                 5,567 out of  69,120    8%
+    Number used as Flip Flops:               5,566
+    Number used as Latches:                      1
+  Number of Slice LUTs:                      5,412 out of  69,120    7%
+    Number used as logic:                    4,987 out of  69,120    7%
+      Number using O6 output only:           3,935
+      Number using O5 output only:             404
+      Number using O5 and O6:                  648
+    Number used as Memory:                     385 out of  17,920    2%
+      Number used as Dual Port RAM:            236
+        Number using O6 output only:           108
+        Number using O5 output only:             8
+        Number using O5 and O6:                120
+      Number used as Shift Register:           149
+        Number using O6 output only:           149
+    Number used as exclusive route-thru:        40
+  Number of route-thrus:                       456
+    Number using O6 output only:               442
+    Number using O5 output only:                12
+    Number using O5 and O6:                      2
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 2,743 out of  17,280   15%
+  Number of LUT Flip Flop pairs used:        7,676
+    Number with an unused Flip Flop:         2,109 out of   7,676   27%
+    Number with an unused LUT:               2,264 out of   7,676   29%
+    Number of fully used LUT-FF pairs:       3,303 out of   7,676   43%
+    Number of unique control sets:             256
+    Number of slice register sites lost
+      to control set restrictions:             356 out of  69,120    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        10 out of     640    1%
+    Number of LOCed IOBs:                        9 out of      10   90%
+    Number of bonded IPADs:                      4
+      Number of LOCed IPADs:                     2 out of       4   50%
+    Number of bonded OPADs:                      2
+
+Specific Feature Utilization:
+  Number of BlockRAM/FIFO:                      17 out of     148   11%
+    Number using BlockRAM only:                 17
+    Total primitives used:
+      Number of 36k BlockRAM used:              15
+      Number of 18k BlockRAM used:               2
+    Total Memory used (KB):                    576 out of   5,328   10%
+  Number of BUFG/BUFGCTRLs:                      4 out of      32   12%
+    Number used as BUFGs:                        4
+  Number of BUFDSs:                              1 out of       8   12%
+  Number of DCM_ADVs:                            1 out of      12    8%
+  Number of GTP_DUALs:                           1 out of       8   12%
+    Number of LOCed GTP_DUALs:                   1 out of       1  100%
+  Number of PCIEs:                               1 out of       1  100%
+  Number of PLL_ADVs:                            1 out of       6   16%
+
+Average Fanout of Non-Clock Nets:                3.74
+
+Peak Memory Usage:  748 MB
+Total REAL time to MAP completion:  5 mins 31 secs 
+Total CPU time to MAP completion:   5 mins 28 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_td
+   p2[0].ram_tdp2_inst
+   of frag REGCLKAU connected to power/ground net
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_td
+   p2[0].ram_tdp2_inst_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_td
+   p2[0].ram_tdp2_inst
+   of frag REGCLKAL connected to power/ground net
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_td
+   p2[0].ram_tdp2_inst_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_td
+   p2[1].ram_tdp2_inst
+   of frag REGCLKAU connected to power/ground net
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_td
+   p2[1].ram_tdp2_inst_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_td
+   p2[1].ram_tdp2_inst
+   of frag REGCLKAL connected to power/ground net
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_td
+   p2[1].ram_tdp2_inst_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_td
+   p2[0].ram_tdp2_inst
+   of frag REGCLKAU connected to power/ground net
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_td
+   p2[0].ram_tdp2_inst_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_td
+   p2[0].ram_tdp2_inst
+   of frag REGCLKAL connected to power/ground net
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_td
+   p2[0].ram_tdp2_inst_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_td
+   p2[1].ram_tdp2_inst
+   of frag REGCLKAU connected to power/ground net
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_td
+   p2[1].ram_tdp2_inst_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_td
+   p2[1].ram_tdp2_inst
+   of frag REGCLKAL connected to power/ground net
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_td
+   p2[1].ram_tdp2_inst_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBU connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBL connected to power/ground net
+   XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.m
+   em/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[
+   7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/
+   Mram_regBank
+   of frag RDRCLKU connected to power/ground net
+   xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/
+   Mram_regBank_RDRCLKU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/
+   Mram_regBank
+   of frag RDRCLKL connected to power/ground net
+   xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/
+   Mram_regBank_RDRCLKL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/Mram_rd_dma_address
+   of frag RDRCLKU connected to power/ground net
+   xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/Mram_rd_dma_address_RDRCLKU_
+   tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/Mram_rd_dma_address
+   of frag RDRCLKL connected to power/ground net
+   xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/Mram_rd_dma_address_RDRCLKL_
+   tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/xillybus_core_ins/pcie_send_dma_ins/Mram_dma_address
+   of frag RDRCLKU connected to power/ground net
+   xillybus_ins/xillybus_core_ins/pcie_send_dma_ins/Mram_dma_address_RDRCLKU_tie
+   sig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xillybus_ins/xillybus_core_ins/pcie_send_dma_ins/Mram_dma_address
+   of frag RDRCLKL connected to power/ground net
+   xillybus_ins/xillybus_core_ins/pcie_send_dma_ins/Mram_dma_address_RDRCLKL_tie
+   sig
+WARNING:Place:644 - A clock IOB clock component is not placed at an optimal
+   clock IOB site. The clock IOB component <dco_p> is placed at site <Y33>. The
+   clock IO site can use the fast path between the IO and the Clock buffer/GCLK
+   if the IOB is placed in the master Clock IOB Site. This is normally an ERROR
+   but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN <dco_p.PAD>
+   allowing your design to continue. This constraint disables all clock placer
+   rules related to the specified COMP.PIN. The use of this override is highly
+   discouraged as it may lead to very poor timing results. It is recommended
+   that this error condition be corrected in the design.
+WARNING:PhysDesignRules:1841 - One or more GTPs are being used in this design.
+   Evaluate the SelectIO-To-GTP Crosstalk section of the Virtex-5 RocketIO GTP
+   Transceiver User Guide to ensure that the design SelectIO usage meets the
+   guidelines to minimize the impact on GTP performance. 
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/icdrreset<0> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network xillybus_ins/cfg_dcommand<10> has no load.
+INFO:LIT:395 - The above info message is repeated 205 more times for the
+   following (max. 5 shown):
+   xillybus_ins/cfg_dcommand<11>,
+   xillybus_ins/cfg_dcommand<15>,
+   xillybus_ins/cfg_dcommand<1>,
+   xillybus_ins/cfg_dcommand<4>,
+   xillybus_ins/cfg_dcommand<8>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:841 - Changing COMPENSATION attribute from SYSTEM_SYNCHRONOUS to
+   INTERNAL for PLL_ADV
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/clocking_i/use_pll.pll_adv_i.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 10 IOs, 9 are locked
+   and 1 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 507 block(s) removed
+  43 block(s) optimized away
+ 617 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "xillybus_ins/cfg_dcommand<10>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dcomm
+and_10" (SFF) removed.
+The signal "xillybus_ins/cfg_dcommand<11>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dcomm
+and_11" (SFF) removed.
+The signal "xillybus_ins/cfg_dcommand<15>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dcomm
+and_15" (SFF) removed.
+The signal "xillybus_ins/cfg_dcommand<1>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dcomm
+and_1" (SFF) removed.
+The signal "xillybus_ins/cfg_dcommand<4>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dcomm
+and_4" (SFF) removed.
+The signal "xillybus_ins/cfg_dcommand<8>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dcomm
+and_8" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<0>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_0" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<10>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_10" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<11>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_11" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<12>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_12" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<13>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_13" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<14>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_14" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<15>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_15" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<1>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_1" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<3>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_3" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<4>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_4" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<5>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_5" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<6>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_6" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<7>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_7" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<8>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_8" (SFF) removed.
+The signal "xillybus_ins/cfg_dstatus<9>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_dstat
+us_9" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<0>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_0" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<10>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_10" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<11>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_11" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<12>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_12" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<13>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_13" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<14>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_14" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<15>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_15" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<1>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_1" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<2>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_2" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<4>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_4" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<5>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_5" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<6>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_6" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<7>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_7" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<8>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_8" (SFF) removed.
+The signal "xillybus_ins/cfg_lcommand<9>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/cfg_lcomm
+and_9" (SFF) removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_bus_master_enable" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_io_space_enable" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_l0_mac_link_up" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_l0_mac_negotiated_link_width<0>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_l0_mac_negotiated_link_width<1>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_l0_mac_negotiated_link_width<2>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_l0_msi_enable0" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_l0_pme_ack" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_l0_pwr_turn_off_req" is loadless and
+has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_l0_stats_tlp_received" is loadless and
+has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_max_payload_size<0>" is loadless and
+has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_max_payload_size<1>" is loadless and
+has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_max_payload_size<2>" is loadless and
+has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_max_read_request_size<0>" is loadless
+and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_max_read_request_size<1>" is loadless
+and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_max_read_request_size<2>" is loadless
+and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_mem_space_enable" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_parity_error_response" is loadless and
+has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/fe_serr_enable" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_rx_valid_n<1>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tc_status<1>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tc_status<2>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tc_status<3>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tc_status<4>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tc_status<5>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tc_status<6>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tc_status<7>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_completion_ready_n<0>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_completion_ready_n<1>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_completion_ready_n<2>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_completion_ready_n<3>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_completion_ready_n<4>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_completion_ready_n<5>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_completion_ready_n<6>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_completion_ready_n<7>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_non_posted_ready_n<0>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_non_posted_ready_n<1>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_non_posted_ready_n<2>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_non_posted_ready_n<3>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_non_posted_ready_n<4>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_non_posted_ready_n<5>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_non_posted_ready_n<6>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_non_posted_ready_n<7>" is
+loadless and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_posted_ready_n<0>" is loadless
+and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_posted_ready_n<1>" is loadless
+and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_posted_ready_n<2>" is loadless
+and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_posted_ready_n<3>" is loadless
+and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_posted_ready_n<4>" is loadless
+and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_posted_ready_n<5>" is loadless
+and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_posted_ready_n<6>" is loadless
+and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_ch_posted_ready_n<7>" is loadless
+and has been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_chan_space<0>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_chan_space<1>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_chan_space<2>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_chan_space<3>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_chan_space<4>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_chan_space<5>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_chan_space<6>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_chan_space<7>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_chan_space<8>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/llk_tx_chan_space<9>" is loadless and has
+been removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<0>" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<11>" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<12>" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<13>" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<14>" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<15>" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<16>" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<1>" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<2>" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<3>" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<4>" is loadless and has been
+removed.
+The signal "xillybus_ins/pcie/pcie_ep0/mgmt_pso<5>" is loadless and has been
+removed.
+The signal "xillybus_ins/trn_rbar_hit_n<0>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/trn_rbar_hit_n<0>1_I
+NV_0" (BUF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it<0>" is loadless and has been removed.
+   Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_0" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_0_rstpot" is loadless and has been removed.
+     Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_0_rstpot" (ROM) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<0>" is loadless and has been removed.
+       Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<0>" (ROM) removed.
+        The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/ou
+tput_stage<67>" is loadless and has been removed.
+         Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/ou
+tput_stage_67" (FF) removed.
+          The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/br
+am_style_fifo_dout_reg<67>" is loadless and has been removed.
+        The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/ou
+tput_stage<64>" is loadless and has been removed.
+         Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/ou
+tput_stage_64" (FF) removed.
+          The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/br
+am_style_fifo_dout_reg<64>" is loadless and has been removed.
+        The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/ou
+tput_stage<65>" is loadless and has been removed.
+         Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/ou
+tput_stage_65" (FF) removed.
+          The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/br
+am_style_fifo_dout_reg<65>" is loadless and has been removed.
+        The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/ou
+tput_stage<66>" is loadless and has been removed.
+         Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/ou
+tput_stage_66" (FF) removed.
+          The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/br
+am_style_fifo_dout_reg<66>" is loadless and has been removed.
+        The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N351" is loadless and has
+been removed.
+         Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<0>_SW0" (ROM) removed.
+          The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/ou
+tput_stage<67>" is loadless and has been removed.
+           Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/ou
+tput_stage_67" (FF) removed.
+            The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/do
+ut_int<67>" is loadless and has been removed.
+          The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/ou
+tput_stage<64>" is loadless and has been removed.
+           Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/ou
+tput_stage_64" (FF) removed.
+            The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/do
+ut_int<64>" is loadless and has been removed.
+          The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/ou
+tput_stage<66>" is loadless and has been removed.
+           Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/ou
+tput_stage_66" (FF) removed.
+            The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/do
+ut_int<66>" is loadless and has been removed.
+          The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/ou
+tput_stage<65>" is loadless and has been removed.
+           Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/ou
+tput_stage_65" (FF) removed.
+            The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/do
+ut_int<65>" is loadless and has been removed.
+The signal "xillybus_ins/trn_rbar_hit_n<1>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/trn_rbar_hit_n<1>1_I
+NV_0" (BUF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it<1>" is loadless and has been removed.
+   Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_1" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_1_rstpot" is loadless and has been removed.
+     Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_1_rstpot" (ROM) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<1>" is loadless and has been removed.
+       Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<1>" (ROM) removed.
+        The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N355" is loadless and has
+been removed.
+         Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<1>_SW0" (ROM) removed.
+The signal "xillybus_ins/trn_rbar_hit_n<2>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/trn_rbar_hit_n<2>1_I
+NV_0" (BUF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it<2>" is loadless and has been removed.
+   Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_2" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_2_rstpot" is loadless and has been removed.
+     Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_2_rstpot" (ROM) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<2>" is loadless and has been removed.
+       Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<2>" (ROM) removed.
+        The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N345" is loadless and has
+been removed.
+         Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<2>_SW0" (ROM) removed.
+The signal "xillybus_ins/trn_rbar_hit_n<3>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/trn_rbar_hit_n<3>1_I
+NV_0" (BUF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it<3>" is loadless and has been removed.
+   Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_3" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_3_rstpot" is loadless and has been removed.
+     Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_3_rstpot" (ROM) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<3>" is loadless and has been removed.
+       Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<3>" (ROM) removed.
+        The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N353" is loadless and has
+been removed.
+         Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<3>_SW0" (ROM) removed.
+The signal "xillybus_ins/trn_rbar_hit_n<4>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/trn_rbar_hit_n<4>1_I
+NV_0" (BUF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it<4>" is loadless and has been removed.
+   Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_4" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_4_rstpot" is loadless and has been removed.
+     Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_4_rstpot" (ROM) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<4>" is loadless and has been removed.
+       Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<4>" (ROM) removed.
+        The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N349" is loadless and has
+been removed.
+         Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<4>_SW0" (ROM) removed.
+The signal "xillybus_ins/trn_rbar_hit_n<5>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/trn_rbar_hit_n<5>1_I
+NV_0" (BUF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it<5>" is loadless and has been removed.
+   Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_5" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_5_rstpot" is loadless and has been removed.
+     Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_5_rstpot" (ROM) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<5>" is loadless and has been removed.
+       Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<5>" (ROM) removed.
+        The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N347" is loadless and has
+been removed.
+         Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<5>_SW0" (ROM) removed.
+The signal "xillybus_ins/trn_rbar_hit_n<6>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/trn_rbar_hit_n<6>1_I
+NV_0" (BUF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it<6>" is loadless and has been removed.
+   Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_6" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_6_rstpot" is loadless and has been removed.
+     Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_6_rstpot" (ROM) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<6>" is loadless and has been removed.
+       Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<6>" (ROM) removed.
+        The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N343" is loadless and has
+been removed.
+         Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_h
+it_mux0000<6>_SW0" (ROM) removed.
+The signal "xillybus_ins/trn_reof_n" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/trn_reof_n1_INV_0"
+(BUF) removed.
+The signal "xillybus_ins/trn_rrem_n<4>" is loadless and has been removed.
+ Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/trn_rrem_n<7>1_INV_0
+" (BUF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rrem<4
+>" is loadless and has been removed.
+   Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rrem_4
+" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rrem_4
+_rstpot" is loadless and has been removed.
+     Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rrem_4
+_rstpot" (MUX) removed.
+      The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N759" is loadless and has
+been removed.
+       Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rrem_4
+_rstpot_F" (ROM) removed.
+      The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N760" is loadless and has
+been removed.
+       Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rrem_4
+_rstpot_G" (ROM) removed.
+The signal
+"XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0
+.wr/gwas.wsts/ram_full_i" is loadless and has been removed.
+ Loadless block
+"XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0
+.wr/gwas.wsts/ram_full_i" (FF) removed.
+The signal
+"XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx
+.clkx/gsync_stage[2].rd_stg_inst/Q_reg<0>" is loadless and has been removed.
+ Loadless block
+"XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx
+.clkx/gsync_stage[2].rd_stg_inst/Q_reg_0" (FF) removed.
+  The signal
+"XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx
+.clkx/gsync_stage[1].rd_stg_inst/Q_reg<0>" is loadless and has been removed.
+   Loadless block
+"XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx
+.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0" (FF) removed.
+    The signal
+"XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx
+.clkx/wr_pntr_gc<0>" is loadless and has been removed.
+     Loadless block
+"XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx
+.clkx/wr_pntr_gc_0" (FF) removed.
+      The signal
+"XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx
+.clkx/wr_pntr_gc_xor0012" is loadless and has been removed.
+       Loadless block
+"XLXI_3/adc_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx
+.clkx/Mxor_wr_pntr_gc_xor0012_Result1" (ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/user_r_read_8_rden_w" is loadless and
+has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/unitw_3_ins/user_r_read_8_rden1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_wren_w" is loadless
+and has been removed.
+ Loadless block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/user_w_write_32_wren1" (ROM)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_changed"
+is loadless and has been removed.
+ Loadless block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_changed" (FF)
+removed.
+  The signal
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_changed_rstpot" is
+loadless and has been removed.
+   Loadless block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_changed_rstpot1"
+(ROM) removed.
+    The signal "xillybus_ins/xillybus_core_ins/N489" is loadless and has been
+removed.
+     Loadless block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_changed_or0000_SW0"
+(ROM) removed.
+      The signal
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_cmp_eq0001" is
+loadless and has been removed.
+       Loadless block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_cmp_eq0001" (ROM)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/N438" is loadless and has been
+removed.
+         Loadless block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_cmp_eq0001_SW0"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data[7]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data_7"
+(FF) removed.
+  The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data_not0001"
+is loadless and has been removed.
+   Loadless block
+"xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data_not00011" (ROM)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[7]" is
+loadless and has been removed.
+   Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_7"
+(FF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[7]"
+is loadless and has been removed.
+     Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_7" (FF)
+removed.
+      The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/increment_header_credits_not00
+01" is loadless and has been removed.
+       Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/increment_header_credits_not00
+011" (ROM) removed.
+      The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[7]" is
+loadless and has been removed.
+       Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[7]"
+(ROM) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[15]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_15"
+(FF) removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_not0001" is
+loadless and has been removed.
+           Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_not00011" (ROM)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/N184" is loadless and has been
+removed.
+         Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[0]51"
+(ROM) removed.
+        The signal "xillybus_ins/xillybus_core_ins/N241" is loadless and has been
+removed.
+         Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[7]_SW0"
+(ROM) removed.
+          The signal "xillybus_ins/xillybus_core_ins/N153" is loadless and has been
+removed.
+           Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[0]31"
+(ROM) removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[7]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_7" (FF)
+removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[31]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_31"
+(FF) removed.
+          The signal "xillybus_ins/xillybus_core_ins/N187" is loadless and has been
+removed.
+           Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[0]61"
+(ROM) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[23]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_23"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/N176" is loadless and has been
+removed.
+         Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[0]41"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data[6]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data_6"
+(FF) removed.
+  The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[6]" is
+loadless and has been removed.
+   Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_6"
+(FF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[6]"
+is loadless and has been removed.
+     Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_6" (FF)
+removed.
+      The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[6]" is
+loadless and has been removed.
+       Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[6]"
+(ROM) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[14]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_14"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/N243" is loadless and has been
+removed.
+         Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[6]_SW0"
+(ROM) removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[6]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_6" (FF)
+removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[30]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_30"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[22]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_22"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data[5]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data_5"
+(FF) removed.
+  The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[5]" is
+loadless and has been removed.
+   Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_5"
+(FF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[5]"
+is loadless and has been removed.
+     Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_5" (FF)
+removed.
+      The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[5]" is
+loadless and has been removed.
+       Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[5]"
+(ROM) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[13]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_13"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/N245" is loadless and has been
+removed.
+         Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[5]_SW0"
+(ROM) removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[5]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_5" (FF)
+removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[29]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_29"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[21]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_21"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data[4]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data_4"
+(FF) removed.
+  The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[4]" is
+loadless and has been removed.
+   Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_4"
+(FF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[4]"
+is loadless and has been removed.
+     Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_4" (FF)
+removed.
+      The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[4]" is
+loadless and has been removed.
+       Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[4]"
+(ROM) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[12]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_12"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/N2471" is loadless and has been
+removed.
+         Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[4]_SW0"
+(ROM) removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[4]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_4" (FF)
+removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[28]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_28"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[20]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_20"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data[3]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data_3"
+(FF) removed.
+  The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[3]" is
+loadless and has been removed.
+   Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_3"
+(FF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[3]"
+is loadless and has been removed.
+     Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_3" (FF)
+removed.
+      The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[3]" is
+loadless and has been removed.
+       Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[3]"
+(ROM) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[11]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_11"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/N249" is loadless and has been
+removed.
+         Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[3]_SW0"
+(ROM) removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[3]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_3" (FF)
+removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[27]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_27"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[19]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_19"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data[2]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data_2"
+(FF) removed.
+  The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[2]" is
+loadless and has been removed.
+   Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_2"
+(FF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[2]"
+is loadless and has been removed.
+     Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_2" (FF)
+removed.
+      The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[2]" is
+loadless and has been removed.
+       Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[2]"
+(ROM) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[10]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_10"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/N2511" is loadless and has been
+removed.
+         Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[2]_SW0"
+(ROM) removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[2]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_2" (FF)
+removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[26]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_26"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[18]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_18"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data[1]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data_1"
+(FF) removed.
+  The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[1]" is
+loadless and has been removed.
+   Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_1"
+(FF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[1]"
+is loadless and has been removed.
+     Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_1" (FF)
+removed.
+      The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[1]" is
+loadless and has been removed.
+       Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[1]"
+(ROM) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[9]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_9" (FF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/N2531" is loadless and has been
+removed.
+         Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[1]_SW0"
+(ROM) removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[1]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_1" (FF)
+removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[25]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_25"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[17]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_17"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data[0]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_4_data_0"
+(FF) removed.
+  The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[0]" is
+loadless and has been removed.
+   Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_0"
+(FF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[0]"
+is loadless and has been removed.
+     Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_0" (FF)
+removed.
+      The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[0]" is
+loadless and has been removed.
+       Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[0]"
+(ROM) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[8]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_8" (FF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/N255" is loadless and has been
+removed.
+         Loadless block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[0]_SW0"
+(ROM) removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[0]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_0" (FF)
+removed.
+          The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[24]" is
+loadless and has been removed.
+           Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_24"
+(FF) removed.
+        The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data[16]" is
+loadless and has been removed.
+         Loadless block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/rd_data_16"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data[7]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data_7"
+(FF) removed.
+  The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data_not0001"
+is loadless and has been removed.
+   Loadless block
+"xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data_not00011" (ROM)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data[6]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data_6"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data[5]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data_5"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data[4]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data_4"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data[3]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data_3"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data[2]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data_2"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data[1]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data_1"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data[0]" is
+loadless and has been removed.
+ Loadless block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_5_data_0"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[31]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[30]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[29]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[28]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[27]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[26]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[25]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[24]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[23]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[22]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[21]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[20]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[19]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[18]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[17]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[16]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[15]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[14]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[13]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[12]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[11]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[10]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[9]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[8]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[7]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[6]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[5]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[4]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[3]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[2]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[1]" is
+loadless and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_w_write_32_data_w[0]" is
+loadless and has been removed.
+Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/bufg1" (CKBUF)
+removed.
+ The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/gt_clk"
+is loadless and has been removed.
+Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk/clocking_i/use_pll.gtxclk_pll_bufg" (CKBUF)
+removed.
+ The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk/clocking_i/clkout2" is loadless
+and has been removed.
+Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk/clocking_i/use_pll.txsync_clk_pll_bufg"
+(CKBUF) removed.
+ The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk/clocking_i/txsync_clkout" is
+loadless and has been removed.
+Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/lut_cfgdw
+_rom0" (ROM) removed.
+Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/lut_cfgdw
+_rom1" (ROM) removed.
+Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/lut_cfgdw
+_rom2" (ROM) removed.
+Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/lut_cfgdw
+_rom3" (ROM) removed.
+Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/lut_cfgdw
+_rom4" (ROM) removed.
+Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/lut_cfgdw
+_rom5" (ROM) removed.
+Loadless block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/lut_cfgdw
+_rom6" (ROM) removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N361" is unused and has been
+removed.
+ Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/completion_
+available_cmp_eq00014_SW0" (ROM) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/rx_ch_credits_receiv
+ed<0>" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/rx_ch_credits_receiv
+ed_0" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/service_rxrcd_ch" is
+unused and has been removed.
+     Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/service_rxrcd_ch"
+(SFF) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/service_rxrcd_ch_cmp
+_eq0000" is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/service_rxrcd_ch_cmp
+_eq00001" (ROM) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr<0>" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_0" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_and0000" is unused and has been removed.
+     Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/last_comple
+tion_mux000041" (ROM) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Result<0>1"
+is unused and has been removed.
+     Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_xor<0>" (XOR) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_lut<0>" is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_lut<0>_INV_0" (BUF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/rx_ch_credits_receiv
+ed<1>" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/rx_ch_credits_receiv
+ed_1" (SFF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr<1>" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_1" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Result<1>1"
+is unused and has been removed.
+     Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_xor<1>" (XOR) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_cy<0>" is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_cy<0>" (MUX) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_cy<1>_rt" is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_cy<1>_rt" (ROM) removed.
+The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N387" is unused and has been
+removed.
+ Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/completion_
+available_or0000_SW0" (ROM) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_p1<1>" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_p1_1" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Result<1>2"
+is unused and has been removed.
+     Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_xor<1>" (XOR) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_cy<0>" is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_cy<0>" (MUX) removed.
+        The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_lut<0>" is unused and has been removed.
+         Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_lut<0>_INV_0" (BUF) removed.
+          The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_p1<0>" is unused and has been removed.
+           Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_p1_0" (SFF) removed.
+            The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Result<0>2"
+is unused and has been removed.
+             Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_xor<0>" (XOR) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_cy<1>_rt" is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_cy<1>_rt" (ROM) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_p1<2>" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_p1_2" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Result<2>2"
+is unused and has been removed.
+     Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_xor<2>" (XOR) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_cy<1>" is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_cy<1>" (MUX) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_cy<2>_rt" is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_cy<2>_rt" (ROM) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/rx_ch_credits_receiv
+ed<2>" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/rx_ch_credits_receiv
+ed_2" (SFF) removed.
+The signal "xillybus_ins/pcie/pcie_ep0/pcie_blk_if/N621" is unused and has been
+removed.
+ Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/completion_
+available_rstpot1_SW0" (ROM) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/rx_ch_credits_receiv
+ed<3>" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/rx_ch_credits_receiv
+ed_3" (SFF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_p1<3>" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_p1_3" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Result<3>2"
+is unused and has been removed.
+     Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_xor<3>" (XOR) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_cy<2>" is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_cy<2>" (MUX) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_xor<3>_rt" is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_p1_xor<3>_rt" (ROM) removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_cy<1>" is unused and has been removed.
+ Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_cy<1>" (MUX) removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_cy<2>" is unused and has been removed.
+ Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_cy<2>" (MUX) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_cy<2>_rt" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_cy<2>_rt" (ROM) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr<2>" is unused and has been removed.
+     Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_2" (SFF) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Result<2>1"
+is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_xor<2>" (XOR) removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_xor<3>_rt" is unused and has been removed.
+ Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_xor<3>_rt" (ROM) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr<3>" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/cpl_tlp_rcn
+tr_3" (SFF) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Result<3>1"
+is unused and has been removed.
+     Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/Mcount_cpl_
+tlp_rcntr_xor<3>" (XOR) removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/completion_
+available" is unused and has been removed.
+ Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/completion_
+available" (FF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/completion_
+available_rstpot1" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/completion_
+available_rstpot1" (ROM) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/completion_
+available_cmp_eq0001" is unused and has been removed.
+     Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/completion_
+available_cmp_eq00014" (ROM) removed.
+    The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/fifo_pcpl_o
+k_final" is unused and has been removed.
+     Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/fifo_pcpl_o
+k_final" (SFF) removed.
+      The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/fifo_pcpl_o
+k_final_rstpot" is unused and has been removed.
+       Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/fifo_pcpl_o
+k_final_rstpot" (ROM) removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/af
+ull" is unused and has been removed.
+ Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/af
+ull" (FF) removed.
+  The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/af
+ull_rstpot" is unused and has been removed.
+   Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/af
+ull_rstpot" (ROM) removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst_not0001"
+is unused and has been removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].rx_phy_statu
+s/VCC" is unused and has been removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].rx_elec_idle
+/VCC" is unused and has been removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].reset/VCC"
+is unused and has been removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].rx_power_dow
+n1/VCC" is unused and has been removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].rx_power_dow
+n0/VCC" is unused and has been removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].tx_power_dow
+n1/VCC" is unused and has been removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].tx_power_dow
+n0/VCC" is unused and has been removed.
+The signal
+"xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].tx_elec_idle
+/VCC" is unused and has been removed.
+The signal "xillybus_ins/xillybus_core_ins/user_r_mem_8_rden_w" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitw_5_ins/user_r_mem_8_rden1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr[4]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_4"
+(SFF) removed.
+  The signal
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[4]" is
+unused and has been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[4]" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/N01" is unused and
+has been removed.
+     Unused block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[0]11" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/N467" is unused and has been removed.
+     Unused block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[4]_SW0"
+(ROM) removed.
+      The signal "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr[0]" is
+unused and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_0"
+(SFF) removed.
+        The signal
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[0]" is
+unused and has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[0]2" (ROM)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_or0000"
+is unused and has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_or00001" (ROM)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr[1]" is
+unused and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_1"
+(SFF) removed.
+        The signal
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[1]" is
+unused and has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[1]1" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr[3]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_3"
+(SFF) removed.
+      The signal
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[3]" is
+unused and has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[3]1" (ROM)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/N11" is unused and
+has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/Madd_unit_5_addr_addsub0001_Madd
+_xor[4]111" (ROM) removed.
+        The signal "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr[2]" is
+unused and has been removed.
+         Unused block "xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_2"
+(SFF) removed.
+          The signal
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[2]" is
+unused and has been removed.
+           Unused block
+"xillybus_ins/xillybus_core_ins/unit_addr_5_ins/unit_5_addr_mux0000[2]1" (ROM)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[8]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[8]"
+(ROM) removed.
+  The signal "xillybus_ins/xillybus_core_ins/N163" is unused and has been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[8]_SW0"
+(ROM) removed.
+  The signal "xillybus_ins/xillybus_core_ins/N256" is unused and has been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[10]41"
+(ROM) removed.
+  The signal "xillybus_ins/xillybus_core_ins/N154" is unused and has been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[10]11"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[8]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_8"
+(FF) removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[9]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[9]"
+(ROM) removed.
+  The signal "xillybus_ins/xillybus_core_ins/N1611" is unused and has been
+removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[9]_SW0"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[9]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_9"
+(FF) removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[10]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[10]"
+(ROM) removed.
+  The signal "xillybus_ins/xillybus_core_ins/N175" is unused and has been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[10]_SW0
+" (ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[10]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_10" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[11]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[11]"
+(ROM) removed.
+  The signal "xillybus_ins/xillybus_core_ins/N173" is unused and has been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[11]_SW0
+" (ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[11]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_11" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[12]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[12]"
+(ROM) removed.
+  The signal "xillybus_ins/xillybus_core_ins/N1711" is unused and has been
+removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[12]_SW0
+" (ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[12]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_12" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[13]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[13]"
+(ROM) removed.
+  The signal "xillybus_ins/xillybus_core_ins/N169" is unused and has been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[13]_SW0
+" (ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[13]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_13" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[14]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[14]"
+(ROM) removed.
+  The signal "xillybus_ins/xillybus_core_ins/N167" is unused and has been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[14]_SW0
+" (ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[14]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_14" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[15]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[15]"
+(ROM) removed.
+  The signal "xillybus_ins/xillybus_core_ins/N165" is unused and has been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[15]_SW0
+" (ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[15]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_15" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[16]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[16]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[16]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_16" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[17]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[17]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[17]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_17" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[18]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[18]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[18]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_18" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[19]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[19]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[19]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_19" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[20]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[20]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[20]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_20" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[21]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[21]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[21]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_21" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[22]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[22]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[22]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_22" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[23]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[23]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[23]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_23" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[24]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[24]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[24]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_24" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[25]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[25]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[25]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_25" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[26]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[26]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[26]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_26" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[27]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[27]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[27]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_27" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[28]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[28]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[28]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_28" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[29]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[29]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[29]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_29" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[30]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[30]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[30]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_30" (FF)
+removed.
+The signal
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[31]" is
+unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_mux0000[31]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data[31]"
+is unused and has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/client_wr_data_31" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[8]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_8"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[9]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_9"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[10]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_10"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[11]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_11"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[12]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_12"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[13]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_13"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[14]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_14"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[15]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_15"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[16]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_16"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[17]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_17"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[18]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_18"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[19]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_19"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[20]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_20"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[21]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_21"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[22]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_22"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[23]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_23"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[24]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_24"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[25]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_25"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[26]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_26"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[27]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_27"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[28]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_28"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[29]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_29"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[30]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_30"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data[31]"
+is unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/pcie_recv_dma_ins/recvbuf_data_31"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[0]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_0" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[1]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_1" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[2]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_2" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[3]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_3" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[4]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_4" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[5]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_5" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[6]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_6" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[7]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_7" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[8]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_8" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[9]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_9" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[10]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_10"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[11]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_11"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[12]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_12"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[13]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_13"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[14]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_14"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[15]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_15"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[16]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_16"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[17]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_17"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[18]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_18"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[19]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_19"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[20]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_20"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[21]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_21"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[22]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_22"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[23]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_23"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[24]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_24"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[25]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_25"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[26]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_26"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[27]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_27"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[28]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_28"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[29]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_29"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[30]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_30"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data[31]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_data_31"
+(FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_wren" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/rd_arbiter_ins/unitr_2_wren" (SFF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1_not0001" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1_not00011"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[6]3" is unused and
+has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_1_xor[6]11" (ROM)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1[6]" is
+unused and has been removed.
+   Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1_6" (SFF)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/N36" is unused and has
+been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_1_xor[3]111" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1[0]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1_0" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[0]4" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_1_xor[0]11_INV_0"
+(BUF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1[1]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1_1" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[1]4" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_1_xor[1]11" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1[2]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1_2" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[2]3" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_1_xor[2]11" (ROM)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1[5]" is
+unused and has been removed.
+   Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1_5" (SFF)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[5]3" is unused and
+has been removed.
+     Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_1_xor[5]11" (ROM)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1[3]" is
+unused and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1_3" (SFF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[3]3" is unused and
+has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_1_xor[3]12" (ROM)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1[4]" is
+unused and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_1_4" (SFF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[4]3" is unused and
+has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_1_xor[4]11" (ROM)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3_not0001" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3_not00011"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[6]4" is unused and
+has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_3_xor[6]11" (ROM)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3[6]" is
+unused and has been removed.
+   Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3_6" (SFF)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/N37" is unused and has
+been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_3_xor[3]111" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3[0]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3_0" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[0]5" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_3_xor[0]11_INV_0"
+(BUF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3[1]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3_1" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[1]5" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_3_xor[1]11" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3[2]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3_2" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[2]4" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_3_xor[2]11" (ROM)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3[5]" is
+unused and has been removed.
+   Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3_5" (SFF)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[5]4" is unused and
+has been removed.
+     Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_3_xor[5]11" (ROM)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3[3]" is
+unused and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3_3" (SFF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[3]4" is unused and
+has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_3_xor[3]12" (ROM)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3[4]" is
+unused and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_3_4" (SFF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[4]4" is unused and
+has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_3_xor[4]11" (ROM)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0_not0001" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0_not00011"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[6]2" is unused and
+has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_0_xor[6]11" (ROM)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0[6]" is
+unused and has been removed.
+   Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0_6" (SFF)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/N35" is unused and has
+been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_0_xor[3]111" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0[0]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0_0" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[0]3" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_0_xor[0]11_INV_0"
+(BUF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0[1]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0_1" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[1]3" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_0_xor[1]11" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0[2]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0_2" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[2]2" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_0_xor[2]11" (ROM)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0[5]" is
+unused and has been removed.
+   Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0_5" (SFF)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[5]2" is unused and
+has been removed.
+     Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_0_xor[5]11" (ROM)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0[3]" is
+unused and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0_3" (SFF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[3]2" is unused and
+has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_0_xor[3]12" (ROM)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0[4]" is
+unused and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_0_4" (SFF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[4]2" is unused and
+has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_0_xor[4]11" (ROM)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2_not0001" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2_not00011"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[6]1" is unused and
+has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_2_xor[6]11" (ROM)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2[6]" is
+unused and has been removed.
+   Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2_6" (SFF)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/N34" is unused and has
+been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_2_xor[3]111" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2[0]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2_0" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[0]2" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_2_xor[0]11_INV_0"
+(BUF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2[1]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2_1" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[1]2" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_2_xor[1]11" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2[2]" is
+unused and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2_2" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[2]1" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_2_xor[2]11" (ROM)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2[5]" is
+unused and has been removed.
+   Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2_5" (SFF)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[5]1" is unused and
+has been removed.
+     Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_2_xor[5]11" (ROM)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2[3]" is
+unused and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2_3" (SFF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[3]1" is unused and
+has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_2_xor[3]12" (ROM)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2[4]" is
+unused and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_2_4" (SFF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[4]1" is unused and
+has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_wr_pointer_2_xor[4]11" (ROM)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer_and0000" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer_and00001"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[6]" is unused and
+has been removed.
+ Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_rd_pointer_xor[6]11" (ROM)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer[6]" is unused
+and has been removed.
+   Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer_6" (SFF)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/N33" is unused and has
+been removed.
+   Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_rd_pointer_xor[3]111" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer[0]" is unused
+and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer_0" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[0]1" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_rd_pointer_xor[0]11_INV_0"
+(BUF) removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer[1]" is unused
+and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer_1" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[1]1" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_rd_pointer_xor[1]11" (ROM)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer[2]" is unused
+and has been removed.
+     Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer_2" (SFF)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[2]" is unused and
+has been removed.
+       Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_rd_pointer_xor[2]11" (ROM)
+removed.
+  The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer[5]" is unused
+and has been removed.
+   Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer_5" (SFF)
+removed.
+    The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[5]" is unused and
+has been removed.
+     Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_rd_pointer_xor[5]11" (ROM)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer[3]" is unused
+and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer_3" (SFF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[3]" is unused and
+has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_rd_pointer_xor[3]12" (ROM)
+removed.
+      The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer[4]" is unused
+and has been removed.
+       Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_pointer_4" (SFF)
+removed.
+        The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/Result[4]" is unused and
+has been removed.
+         Unused block
+"xillybus_ins/xillybus_core_ins/unitr_2_ins/Mcount_rd_pointer_xor[4]11" (ROM)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_segment[1]" is unused
+and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_segment_1" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_segment[0]" is unused
+and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_segment_0" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[31]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_31" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[30]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_30" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[29]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_29" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[28]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_28" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[27]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_27" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[26]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_26" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[25]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_25" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[24]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_24" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[23]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_23" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[22]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_22" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[21]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_21" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[20]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_20" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[19]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_19" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[18]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_18" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[17]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_17" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[16]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_16" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[15]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_15" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[14]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_14" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[13]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_13" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[12]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_12" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[11]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_11" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[10]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_10" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[9]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_9" (FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[8]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_8" (FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[7]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_7" (FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[6]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_6" (FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[5]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_5" (FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[4]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_4" (FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[3]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_3" (FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[2]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_2" (FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[1]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_1" (FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d[0]" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/data_d_0" (FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wren_d" is unused and has
+been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wren_d" (FF) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[6]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[6]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer[6]" is unused
+and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_6" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[5]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[5]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer[5]" is unused
+and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_5" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[4]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[4]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer[4]" is unused
+and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_4" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[3]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[3]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_31" is unused
+and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_31" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[2]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[2]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_21" is unused
+and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_21" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[1]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[1]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_11" is unused
+and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_11" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[0]" is
+unused and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_mux0000[0]1"
+(ROM) removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_01" is unused
+and has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/wr_pointer_01" (FF)
+removed.
+The signal "xillybus_ins/xillybus_core_ins/unitr_2_ins/rd_en_real" is unused and
+has been removed.
+ Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/fifo_empty_not0001211"
+(ROM) removed.
+Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/Ms
+hreg_dout_int_64_0" (SRLC16E) removed.
+Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/Ms
+hreg_dout_int_65_0" (SRLC16E) removed.
+Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/Ms
+hreg_dout_int_66_0" (SRLC16E) removed.
+Unused block
+"xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/Ms
+hreg_dout_int_67_0" (SRLC16E) removed.
+Unused block "xillybus_ins/xillybus_core_ins/unitr_2_ins/Mram_fifo_ram"
+(RAMB18SDP) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XLXI_3/adc_fifo/XST_GND
+VCC 		XLXI_3/adc_fifo/XST_VCC
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		xillybus_ins/pcie/pcie_ep0/pcie_blk_if/XST_GND
+VCC 		xillybus_ins/pcie/pcie_ep0/pcie_blk_if/XST_VCC
+LUT6
+		xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/np_rnp_sta
+ll_and0000
+   optimized to 0
+LUT2
+		xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/np_rnp_sta
+ll_and0000_SW0
+   optimized to 1
+LUT4
+		xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_pktcnt
+_not0001211
+   optimized to 1
+FDS
+		xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rnp_o
+k_d
+   optimized to 1
+INV
+		xillybus_ins/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst_not00011_
+INV_0
+GND 		xillybus_ins/xillybus_core_ins/XST_GND
+VCC 		xillybus_ins/xillybus_core_ins/XST_VCC
+LUT4
+		xillybus_ins/xillybus_core_ins/pcie_send_dma_ins/Mcompar_send_next_length_unbo
+unded_cmp_gt0000_lutdi
+   optimized to 0
+LUT4
+		xillybus_ins/xillybus_core_ins/pcie_send_dma_ins/Mcompar_send_next_length_unbo
+unded_cmp_gt0000_lutdi1
+   optimized to 0
+LUT2 		xillybus_ins/xillybus_core_ins/unitr_2_ins/fifo_empty_not000111
+   optimized to 1
+FD 		xillybus_ins/xillybus_core_ins/unitr_4_ins/unitr_4_almostfull_d
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitr_5_ins/unitr_5_almostfull_d
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_3_ins/unitw_3_data_0
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_3_ins/unitw_3_data_1
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_3_ins/unitw_3_data_2
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_3_ins/unitw_3_data_3
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_3_ins/unitw_3_data_4
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_3_ins/unitw_3_data_5
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_3_ins/unitw_3_data_6
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_3_ins/unitw_3_data_7
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_5_ins/unitw_5_data_0
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_5_ins/unitw_5_data_1
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_5_ins/unitw_5_data_2
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_5_ins/unitw_5_data_3
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_5_ins/unitw_5_data_4
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_5_ins/unitw_5_data_5
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_5_ins/unitw_5_data_6
+   optimized to 0
+FD 		xillybus_ins/xillybus_core_ins/unitw_5_ins/unitw_5_data_7
+   optimized to 0
+GND 		xillybus_ins/xillybus_core_ins/msg_buf_ins/XST_GND
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| GPIO_LED<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| GPIO_LED<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| GPIO_LED<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| GPIO_LED<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PCIE_PERST_B_LS                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| PCIE_REFCLK_N                      | IPAD             | INPUT     |                      |       |          |      |              |          |          |
+| PCIE_REFCLK_P                      | IPAD             | INPUT     |                      |       |          |      |              |          |          |
+| PCIE_RX0_N                         | IPAD             | INPUT     |                      |       |          |      |              |          |          |
+| PCIE_RX0_P                         | IPAD             | INPUT     |                      |       |          |      |              |          |          |
+| PCIE_TX0_N                         | OPAD             | OUTPUT    |                      |       |          |      |              |          |          |
+| PCIE_TX0_P                         | OPAD             | OUTPUT    |                      |       |          |      |              |          |          |
+| dco_n                              | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| dco_p                              | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fifo_rst                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| locked                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| quiesce                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

@@ -1,0 +1,10 @@
+[Inputs]
+dco
+=dch1[5:0]=
+=dch2[5:0]=
+[Outputs]
+=cat_data[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel cat
+

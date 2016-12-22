@@ -1,0 +1,4 @@
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/capture_control.v -lang verilog -prj adc_capture -o capture_control.spl -module capture_control -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 capture_control.spl E:/xillybus_adc_capture/adc_capture/capture_control.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/capture_control.v -lang verilog -prj adc_capture -o capture_control.spl -module capture_control -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 capture_control.spl E:/xillybus_adc_capture/adc_capture/capture_control.sym 

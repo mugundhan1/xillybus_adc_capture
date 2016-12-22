@@ -1,0 +1,13 @@
+
+run
+-ifn source_files_xst.prj
+-ifmt Verilog
+-p xc5vsx50t-ff1136-1
+-bufg 0
+-iobuf no
+-top pcie_v5
+-ofn pcie_v5.ngc
+-opt_mode SPEED
+-opt_level 2
+-ofmt NGC
+-uc source_xst.xcf

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/cat.v -lang verilog -prj adc_capture -o cat.spl -module cat -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 cat.spl E:/xillybus_adc_capture/adc_capture/cat.sym 

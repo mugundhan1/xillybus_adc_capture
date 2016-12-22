@@ -1,0 +1,13 @@
+MODULE sing_chan_cap
+	SUBMODULE Busmaker
+		INSTANCE XLXI_1
+	SUBMODULE adc_8_fifo
+		INSTANCE XLXI_2
+	SUBMODULE capture_control
+		INSTANCE XLXI_3
+	SUBMODULE data_clk
+		INSTANCE XLXI_4
+	SUBMODULE xillybus
+		INSTANCE xillybus_ins
+	SUBMODULE byte_reorder
+		INSTANCE XLXI_15

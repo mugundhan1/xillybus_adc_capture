@@ -1,0 +1,2 @@
+xaw2spl {-intstyle ise} E:/xillybus_adc_capture/adc_capture/ipcore_dir/dcm_clkcl.xaw 
+spl2sym -intstyle ise -family virtex5 dcm_clkcl.spl E:/xillybus_adc_capture/adc_capture/dcm_clkcl.sym 

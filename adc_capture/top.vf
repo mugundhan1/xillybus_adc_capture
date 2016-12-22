@@ -1,0 +1,142 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.5
+//  \   \         Application : sch2hdl
+//  /   /         Filename : top.vf
+// /___/   /\     Timestamp : 06/02/2016 12:37:29
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath E:/xillybus_adc_capture/adc_capture/ipcore_dir -intstyle ise -family virtex5 -verilog E:/xillybus_adc_capture/adc_capture/top.vf -w E:/xillybus_adc_capture/adc_capture/top.sch
+//Design Name: top
+//Device: virtex5
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module top(dco_n, 
+           dco_p, 
+           d_n, 
+           d_p, 
+           fifo_rst, 
+           PCIE_PERST_B_LS, 
+           PCIE_REFCLK_N, 
+           PCIE_REFCLK_P, 
+           PCIE_RX0_N, 
+           PCIE_RX0_P, 
+           GPIO_LED, 
+           locked, 
+           PCIE_TX0_N, 
+           PCIE_TX0_P, 
+           quiesce);
+
+    input dco_n;
+    input dco_p;
+    input [5:0] d_n;
+    input [5:0] d_p;
+    input fifo_rst;
+    input PCIE_PERST_B_LS;
+    input PCIE_REFCLK_N;
+    input PCIE_REFCLK_P;
+    input PCIE_RX0_N;
+    input PCIE_RX0_P;
+   output [3:0] GPIO_LED;
+   output locked;
+   output PCIE_TX0_N;
+   output PCIE_TX0_P;
+   output quiesce;
+   
+   wire dclk;
+   wire pcie_ref_clk;
+   wire XLXN_8;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_27;
+   wire XLXN_29;
+   wire XLXN_41;
+   wire [15:0] XLXN_44;
+   wire [5:0] XLXN_49;
+   wire [5:0] XLXN_50;
+   wire [31:0] XLXN_51;
+   wire [31:0] XLXN_52;
+   
+   assign XLXN_8 = 0;
+   adc_fifo_wrapper  adc_ff (.din(XLXN_44[15:0]), 
+                            .rd_clk(XLXN_22), 
+                            .rd_en(XLXN_23), 
+                            .rst(fifo_rst), 
+                            .wr_clk(XLXN_27), 
+                            .wr_en(XLXN_41), 
+                            .dout(XLXN_51[31:0]), 
+                            .empty(XLXN_29), 
+                            .full());
+   capture_control  cc (.dclk(dclk), 
+                       .dv(XLXN_41));
+   dcm_clkcl  clk_cond (.CLKIN_N_IN(dco_n), 
+                       .CLKIN_P_IN(dco_p), 
+                       .RST_IN(XLXN_8), 
+                       .CLKIN_IBUFGDS_OUT(), 
+                       .CLK0_OUT(dclk), 
+                       .LOCKED_OUT(locked));
+   (* IOSTANDARD = "DEFAULT" *) 
+   IBUFDS #( .DIFF_TERM("FALSE") ) pcieclk_ibuf (.I(PCIE_REFCLK_P), 
+                        .IB(PCIE_REFCLK_N), 
+                        .O(pcie_ref_clk));
+   xillybus  xillybus_ins (.PCIE_PERST_B_LS(PCIE_PERST_B_LS), 
+                          .pcie_ref_clk(pcie_ref_clk), 
+                          .PCIE_RX0_N(PCIE_RX0_N), 
+                          .PCIE_RX0_P(PCIE_RX0_P), 
+                          .user_r_mem_8_data(), 
+                          .user_r_mem_8_empty(), 
+                          .user_r_mem_8_eof(), 
+                          .user_r_read_8_data(), 
+                          .user_r_read_8_empty(), 
+                          .user_r_read_8_eof(), 
+                          .user_r_read_32_data(XLXN_52[31:0]), 
+                          .user_r_read_32_empty(XLXN_29), 
+                          .user_r_read_32_eof(), 
+                          .user_w_mem_8_full(), 
+                          .user_w_write_8_full(), 
+                          .user_w_write_32_full(), 
+                          .bus_clk(XLXN_22), 
+                          .GPIO_LED(GPIO_LED[3:0]), 
+                          .PCIE_TX0_N(PCIE_TX0_N), 
+                          .PCIE_TX0_P(PCIE_TX0_P), 
+                          .quiesce(quiesce), 
+                          .user_mem_8_addr(), 
+                          .user_mem_8_addr_update(), 
+                          .user_r_mem_8_open(), 
+                          .user_r_mem_8_rden(), 
+                          .user_r_read_8_open(), 
+                          .user_r_read_8_rden(), 
+                          .user_r_read_32_open(), 
+                          .user_r_read_32_rden(XLXN_23), 
+                          .user_w_mem_8_data(), 
+                          .user_w_mem_8_open(), 
+                          .user_w_mem_8_wren(), 
+                          .user_w_write_8_data(), 
+                          .user_w_write_8_open(), 
+                          .user_w_write_8_wren(), 
+                          .user_w_write_32_data(), 
+                          .user_w_write_32_open(), 
+                          .user_w_write_32_wren());
+   INV  XLXI_13 (.I(dclk), 
+                .O(XLXN_27));
+   cat  XLXI_14 (.dch1(XLXN_49[5:0]), 
+                .dch2(XLXN_50[5:0]), 
+                .dco(dclk), 
+                .cat_data(XLXN_44[15:0]));
+   front_end  XLXI_15 (.dclk(dclk), 
+                      .d_n(d_n[5:0]), 
+                      .d_p(d_p[5:0]), 
+                      .dat_chA(XLXN_49[5:0]), 
+                      .dat_chB(XLXN_50[5:0]));
+   byte_reorder_16  XLXI_16 (.data_in(XLXN_51[31:0]), 
+                            .data_out(XLXN_52[31:0]));
+endmodule

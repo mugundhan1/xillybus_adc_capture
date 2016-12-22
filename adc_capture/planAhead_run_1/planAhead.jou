@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.5 (64-bit)
+# Build 247527 by xbuild on Mon Mar 25 17:13:07 MDT 2013
+# Start of session at: Mon May 30 16:16:29 2016
+# Process ID: 6472
+# Log file: E:/xillybus_adc_capture/adc_capture/planAhead_run_1/planAhead.log
+# Journal file: E:/xillybus_adc_capture/adc_capture/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/xillybus_adc_capture/adc_capture/pa.fromNcd.tcl

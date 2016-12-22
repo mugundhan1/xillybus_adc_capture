@@ -1,0 +1,14 @@
+set -tmpdir E:\xillybus_adc_capture\ad9284_2ch_capture\capture_2ch\spi_ctrl\synthesis\xst_temp_dir\
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc5vlx110tff1136-1
+-top spi_ctrl_generic_spi_wrapper
+-ifmt MIXED
+-ifn spi_ctrl_generic_spi_wrapper_xst.prj
+-ofn ../implementation/spi_ctrl_generic_spi_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"E:\xillybus_adc_capture\ad9284_2ch_capture\capture_2ch\spi_ctrl\pcores\" "E:\Xilinx\14.5\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "E:\Xilinx\14.5\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }

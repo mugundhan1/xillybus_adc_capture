@@ -1,0 +1,126 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.5
+//  \   \         Application : sch2hdl
+//  /   /         Filename : brd_clk_chk.vf
+// /___/   /\     Timestamp : 06/02/2016 12:01:07
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath E:/xillybus_adc_capture/adc_capture/ipcore_dir -intstyle ise -family virtex5 -verilog E:/xillybus_adc_capture/adc_capture/brd_clk_chk.vf -w E:/xillybus_adc_capture/adc_capture/brd_clk_chk.sch
+//Design Name: brd_clk_chk
+//Device: virtex5
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module brd_clk_chk(dco_n, 
+                   dco_p, 
+                   fifo_rst, 
+                   PCIE_PERST_B_LS, 
+                   PCIE_REFCLK_N, 
+                   PCIE_REFCLK_P, 
+                   PCIE_RX0_N, 
+                   PCIE_RX0_P, 
+                   GPIO_LED, 
+                   locked, 
+                   PCIE_TX0_N, 
+                   PCIE_TX0_P, 
+                   quiesce);
+
+    input dco_n;
+    input dco_p;
+    input fifo_rst;
+    input PCIE_PERST_B_LS;
+    input PCIE_REFCLK_N;
+    input PCIE_REFCLK_P;
+    input PCIE_RX0_N;
+    input PCIE_RX0_P;
+   output [3:0] GPIO_LED;
+   output locked;
+   output PCIE_TX0_N;
+   output PCIE_TX0_P;
+   output quiesce;
+   
+   wire dclk;
+   wire pcie_ref_clk;
+   wire XLXN_8;
+   wire XLXN_10;
+   wire XLXN_12;
+   wire XLXN_70;
+   wire [31:0] XLXN_72;
+   wire [31:0] XLXN_73;
+   wire XLXN_78;
+   wire [15:0] XLXN_82;
+   
+   (* IOSTANDARD = "DEFAULT" *) 
+   IBUFDS #( .DIFF_TERM("FALSE") ) pcieclk_ibuf (.I(PCIE_REFCLK_P), 
+                        .IB(PCIE_REFCLK_N), 
+                        .O(pcie_ref_clk));
+   xillybus  xillybus_ins (.PCIE_PERST_B_LS(PCIE_PERST_B_LS), 
+                          .pcie_ref_clk(pcie_ref_clk), 
+                          .PCIE_RX0_N(PCIE_RX0_N), 
+                          .PCIE_RX0_P(PCIE_RX0_P), 
+                          .user_r_mem_8_data(), 
+                          .user_r_mem_8_empty(), 
+                          .user_r_mem_8_eof(), 
+                          .user_r_read_8_data(), 
+                          .user_r_read_8_empty(), 
+                          .user_r_read_8_eof(), 
+                          .user_r_read_32_data(XLXN_73[31:0]), 
+                          .user_r_read_32_empty(XLXN_8), 
+                          .user_r_read_32_eof(), 
+                          .user_w_mem_8_full(), 
+                          .user_w_write_8_full(), 
+                          .user_w_write_32_full(), 
+                          .bus_clk(XLXN_10), 
+                          .GPIO_LED(GPIO_LED[3:0]), 
+                          .PCIE_TX0_N(PCIE_TX0_N), 
+                          .PCIE_TX0_P(PCIE_TX0_P), 
+                          .quiesce(quiesce), 
+                          .user_mem_8_addr(), 
+                          .user_mem_8_addr_update(), 
+                          .user_r_mem_8_open(), 
+                          .user_r_mem_8_rden(), 
+                          .user_r_read_8_open(), 
+                          .user_r_read_8_rden(), 
+                          .user_r_read_32_open(), 
+                          .user_r_read_32_rden(XLXN_12), 
+                          .user_w_mem_8_data(), 
+                          .user_w_mem_8_open(), 
+                          .user_w_mem_8_wren(), 
+                          .user_w_write_8_data(), 
+                          .user_w_write_8_open(), 
+                          .user_w_write_8_wren(), 
+                          .user_w_write_32_data(), 
+                          .user_w_write_32_open(), 
+                          .user_w_write_32_wren());
+   adc_8_fifo  XLXI_3 (.din(XLXN_82[15:0]), 
+                      .rd_clk(XLXN_10), 
+                      .rd_en(XLXN_12), 
+                      .rst(fifo_rst), 
+                      .wr_clk(dclk), 
+                      .wr_en(XLXN_70), 
+                      .dout(XLXN_72[31:0]), 
+                      .empty(XLXN_8), 
+                      .full());
+   INV  XLXI_7 (.I(XLXN_78), 
+               .O(dclk));
+   cc  XLXI_17 (.dclk(XLXN_78), 
+               .data(XLXN_82[15:0]), 
+               .dv(XLXN_70));
+   dcm_clkcl  XLXI_21 (.CLKIN_N_IN(dco_n), 
+                      .CLKIN_P_IN(dco_p), 
+                      .RST_IN(), 
+                      .CLKIN_IBUFGDS_OUT(), 
+                      .CLK0_OUT(XLXN_78), 
+                      .LOCKED_OUT(locked));
+   byte_reorder_16  XLXI_22 (.data_in(XLXN_72[31:0]), 
+                            .data_out(XLXN_73[31:0]));
+endmodule

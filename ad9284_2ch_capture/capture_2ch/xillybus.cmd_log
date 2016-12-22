@@ -1,0 +1,6 @@
+vhdtdtfi -lib work E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/xillybus.v -lang verilog -prj capture_2ch -o xillybus.spl -module xillybus -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 xillybus.spl E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/xillybus.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/xillybus.v -lang verilog -prj capture_2ch -o xillybus.spl -module xillybus -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 xillybus.spl E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/xillybus.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/xillybus.v -lang verilog -prj capture_2ch -o xillybus.spl -module xillybus -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 xillybus.spl E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/xillybus.sym 

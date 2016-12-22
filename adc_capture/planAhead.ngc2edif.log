@@ -1,0 +1,166 @@
+Release 14.5 - ngc2edif P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design sing_chan_cap.ngc ...
+WARNING:NetListWriters:298 - No output is written to sing_chan_cap.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus cf_bridge/cfg_arb/byte_06<7 : 0> on
+   block pcie_blk_if is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus cf_bridge/cfg_arb/byte_06_mux0000<7 : 0>
+   on block pcie_blk_if is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/error_manager/cfg_hdr_buf/_varindex0000<49 : 42> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/error_manager/cfg_hdr_buf/reg_rdata<49 : 42> on block pcie_blk_if
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/error_manager/reg_cmt_wr_hdr<49 : 0> on block pcie_blk_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/cfg_command<10 : 0> on block pcie_blk_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/cfg_msgctrl<7 : 0> on block pcie_blk_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/cfg_rx_bar0<31 : 0> on block pcie_blk_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/cfg_rx_xrom<31 : 0> on block pcie_blk_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/mgmt_bwren<3 : 0> on block pcie_blk_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/mgmt_wdata<21 : 16> on block pcie_blk_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/mgmt_wdata_mux0000<21 : 16> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/ll_credit/sub_srl_gen[0].srl_sub_cal2/data<11 : 0> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/ll_credit/sub_srl_gen[0].srl_sub_cal3/data<11 : 0> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/ll_credit/sub_srl_gen[0].srl_sub_cal4/data<11 : 0> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/ll_credit/sub_srl_gen[0].srl_sub_cal6/data<11 : 5> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/rx_bridge/bar_decoder/bar_hit<6 : 0> on block pcie_blk_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ll_bridge/rx_bridge/fifo_inst/trn_rrem<4
+   : 0> on block pcie_blk_if is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ll_bridge/rx_bridge/snk_inst/bar_o<6 :
+   0> on block pcie_blk_if is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/rx_bridge/snk_inst/cur_fulltype<6 : 0> on block pcie_blk_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/rx_bridge/snk_inst/cur_fulltype_mux0000<6 : 0> on block pcie_blk_if
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/rx_bridge/snk_inst/cur_fulltype_oh<7 : 0> on block pcie_blk_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ll_bridge/rx_bridge/snk_inst/rem_q<5 :
+   1> on block pcie_blk_if is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus ll_bridge/rx_bridge/snk_inst/src_rdy_q<5
+   : 1> on block pcie_blk_if is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file sing_chan_cap.edif ...
+ngc2edif: Total memory usage is 91376 kilobytes
+
+Release 14.5 - ngc2edif P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design adc_fifo_8bit.ngc ...
+WARNING:NetListWriters:298 - No output is written to adc_fifo_8bit.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file adc_fifo_8bit.edif ...
+ngc2edif: Total memory usage is 79280 kilobytes
+
+Release 14.5 - ngc2edif P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design xillybus_core.ngc ...
+WARNING:NetListWriters:298 - No output is written to xillybus_core.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus bar_registers_ins/buf_ctrl_reg[26 : 0]
+   on block xillybus_core is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus bar_registers_ins/dma_bufno_reg[31 : 0]
+   on block xillybus_core is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus messages_ins/msg_buf_real_word[26 : 0]
+   on block xillybus_core is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   messages_ins/msg_buf_real_word_mux0000[26 : 0] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus messages_ins/msg_buf_w0[26 : 0] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   messages_ins/wrbuffer_msg_data_mux0000[31 : 22] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_recv_dma_ins/Madd_rdrq_length_addsub0000_cy[4 : 2] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_recv_dma_ins/Madd_reduce_header_credits_addsub0000_cy[4 : 2] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_recv_dma_ins/Msub_max_readsize_end_offset_addsub0000_cy[5 : 3] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus pcie_recv_dma_ins/rd_byte_offset_d[7 :
+   4] on block xillybus_core is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_recv_dma_ins/rd_byte_offset_d_mux0000[7 : 4] on block xillybus_core is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_send_dma_ins/Madd_wr_first_length_addsub0000_cy[8 : 4] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_v5_request_ins/tlp_compose/header0[30 : 0] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_v5_request_ins/tlp_compose/header1[31 : 0] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_v5_request_ins/tlp_dissect/header0[30 : 0] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_v5_request_ins/tlp_dissect/header1[15 : 0] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_v5_request_ins/tlp_dissect/header2[10 : 2] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pcie_v5_request_ins/trn32_rd[30 : 0] on
+   block xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file xillybus_core.edif ...
+ngc2edif: Total memory usage is 94000 kilobytes
+

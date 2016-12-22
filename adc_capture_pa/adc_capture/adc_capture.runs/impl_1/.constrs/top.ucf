@@ -1,0 +1,75 @@
+# Placing the PCIe port. Pins are allocated automatically according to this
+
+INST "xillybus_ins/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/GTD[0].GT_i" LOC = GTP_DUAL_X0Y2;
+
+NET "PCIE_REFCLK_P" LOC = AF4;
+NET "PCIE_REFCLK_N" LOC = AF3;
+NET "PCIE_PERST_B_LS" LOC = W10;
+
+# Some LEDs. Not really necessary
+NET "GPIO_LED[0]" LOC = H18;
+NET "GPIO_LED[1]" LOC = L18;
+NET "GPIO_LED[2]" LOC = G15;
+NET "GPIO_LED[3]" LOC = AD26;
+
+# BlockRAM placement. Not clear how necessary this is.
+#
+INST "xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_tdp2[1].ram_tdp2_inst" LOC = RAMB36_X3Y13;
+INST "xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_tdp2[1].ram_tdp2_inst" LOC = RAMB36_X3Y12;
+INST "xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_tdp2[0].ram_tdp2_inst" LOC = RAMB36_X3Y11;
+INST "xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_tdp2[0].ram_tdp2_inst" LOC = RAMB36_X3Y10;
+INST "xillybus_ins/pcie/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_retry/generate_sdp.ram_sdp_inst" LOC = RAMB36_X3Y9;
+
+# Timing contraints for a 100 MHz reference clock.
+NET "pcie_ref_clk" PERIOD = 10 ns;
+ 
+NET "*/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/gt_refclk_out" TNM_NET = "MGTCLK";
+TIMESPEC TS_MGTCLK = PERIOD "MGTCLK" 100 MHz HIGH 50 %;
+
+# Set termination for reference clock
+NET "PCIE_REFCLK_N" DIFF_TERM = "TRUE";
+NET "PCIE_REFCLK_P" DIFF_TERM = "TRUE";
+//PIN "XLXI_12.I" CLOCK_DEDICATED_ROUTE = FALSE;
+
+//PIN "XLXI_1/pcieclk_ibuf.I" CLOCK_DEDICATED_ROUTE = FALSE;
+
+//NET "mclk" LOC="AH15";
+NET "fifo_rst" LOC = AK7;
+//NET "local_fifo_rst" LOC=AJ7;
+
+// ADC Data and Clock Inputs
+NET "dco_p" LOC = Y33;
+NET "dco_p" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "dco_n" LOC = AA33;
+NET "dclk" TNM_NET = "DCLK";
+TIMESPEC TS_DCLK = PERIOD "DCLK" 200 MHz HIGH 50 %;
+NET "locked" LOC = AE24;
+
+// Data signals
+NET "d_p[5]" LOC = AF34;
+NET "d_n[5]" LOC = AE34;
+NET "d_p[4]" LOC = AF33;
+NET "d_n[4]" LOC = AE33;
+NET "d_p[3]" LOC = AC34;
+NET "d_n[3]" LOC = AD34;
+NET "d_p[2]" LOC = AC32;
+NET "d_n[2]" LOC = AB32;
+NET "d_p[1]" LOC = AC33;
+NET "d_n[1]" LOC = AB33;
+NET "d_p[0]" LOC = AN32;
+NET "d_n[0]" LOC = AP32;
+
+// Accumulation length select dip switches in the GPIO Dip switch bank, first 4 gpio dips
+//NET "acc_len_sel_sw<0>" LOC="U25";
+//NET "acc_len_sel_sw<1>" LOC="AG27";
+//NET "acc_len_sel_sw<2>" LOC="AF25";
+//NET "acc_len_sel_sw<3>" LOC="AF26";
+
+// Accumulation reset -- centre push button
+//NET "acc_rst" LOC="AJ6";
+
+//sysgen spec clk constraint
+//NET "spec_clk" TNM_NET = "clk_d4095159";
+//TIMESPEC "TS_clk_d4095159" = PERIOD "clk_d4095159" 5.0 ns HIGH 50 %;
+
+

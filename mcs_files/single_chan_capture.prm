@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o E:\xillybus_adc_capture\mcs_files//single_chan_capture -x xcf32p -ver 0 E:/xillybus_adc_capture/adc_capture/sing_chan_cap.bit 
+
+PROM E:\xillybus_adc_capture\mcs_files\single_chan_capture.prm map: Tue May 31 10:38:14 2016
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          4096K
+PROM start    0000:0000
+PROM end      003f:ffff
+PROM checksum 05663852
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    003b:5abf     May 31 10:24:34 2016 E:/xillybus_adc_capture/adc_capture/sing_chan_cap.bit

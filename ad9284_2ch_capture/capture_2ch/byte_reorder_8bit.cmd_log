@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/byte_reorder.v -lang verilog -prj capture_2ch -o byte_reorder_8bit.spl -module byte_reorder_8bit -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 byte_reorder_8bit.spl E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/byte_reorder_8bit.sym 

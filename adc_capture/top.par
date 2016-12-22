@@ -1,0 +1,253 @@
+Release 14.5 par P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+SONY-VAIO::  Thu Jun 02 12:54:24 2016
+
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+
+
+Constraints file: top.pcf.
+Loading device for application Rf_Device from file '5vlx110t.nph' in environment E:\Xilinx\14.5\ISE_DS\ISE\.
+   "top" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.73 2013-03-26".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFDSs                          1 out of 8      12%
+   Number of BUFGs                           4 out of 32     12%
+   Number of DCM_ADVs                        1 out of 12      8%
+   Number of GTP_DUALs                       1 out of 8      12%
+      Number of LOCed GTP_DUALs              1 out of 1     100%
+
+   Number of ILOGICs                         6 out of 800     1%
+   Number of External IOBs                  22 out of 640     3%
+      Number of LOCed IOBs                  21 out of 22     95%
+
+   Number of External IPADs                  4 out of 690     1%
+      Number of LOCed IPADs                  2 out of 4      50%
+
+   Number of External OPADs                  2 out of 32      6%
+      Number of LOCed OPADs                  0 out of 2       0%
+
+   Number of PCIEs                           1 out of 1     100%
+   Number of PLL_ADVs                        1 out of 6      16%
+   Number of RAMB18X2s                       2 out of 148     1%
+   Number of RAMB36SDP_EXPs                  4 out of 148     2%
+      Number of LOCed RAMB36SDP_EXPs         1 out of 4      25%
+
+   Number of RAMB36_EXPs                    11 out of 148     7%
+      Number of LOCed RAMB36_EXPs            4 out of 11     36%
+
+   Number of Slices                       2920 out of 17280  16%
+   Number of Slice Registers              5547 out of 69120   8%
+      Number used as Flip Flops           5546
+      Number used as Latches                 1
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                   5395 out of 69120   7%
+   Number of Slice LUT-Flip Flop pairs    7746 out of 69120  11%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 28 secs 
+Finished initial Timing Analysis.  REAL time: 28 secs 
+
+Starting Router
+
+
+Phase  1  : 36253 unrouted;      REAL time: 32 secs 
+
+Phase  2  : 30947 unrouted;      REAL time: 37 secs 
+
+Phase  3  : 10989 unrouted;      REAL time: 1 mins 17 secs 
+
+Phase  4  : 11038 unrouted; (Setup:4395, Hold:60500, Component Switching Limit:0)     REAL time: 1 mins 52 secs 
+
+Updating file: top.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:4822, Hold:64880, Component Switching Limit:0)     REAL time: 2 mins 18 secs 
+
+Phase  6  : 0 unrouted; (Setup:4197, Hold:64880, Component Switching Limit:0)     REAL time: 2 mins 27 secs 
+
+Updating file: top.ncd with current fully routed design.
+
+Phase  7  : 0 unrouted; (Setup:3356, Hold:64880, Component Switching Limit:0)     REAL time: 3 mins 1 secs 
+
+Updating file: top.ncd with current fully routed design.
+
+Phase  8  : 0 unrouted; (Setup:3356, Hold:64880, Component Switching Limit:0)     REAL time: 3 mins 13 secs 
+
+Phase  9  : 0 unrouted; (Setup:3356, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 40 secs 
+
+Phase 10  : 0 unrouted; (Setup:1049, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 43 secs 
+Total REAL time to Router completion: 3 mins 43 secs 
+Total CPU time to Router completion: 3 mins 53 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|             XLXN_22 | BUFGCTRL_X0Y5| No   | 2095 |  0.600     |  2.124      |
++---------------------+--------------+------+------+------------+-------------+
+|xillybus_ins/pcie/pc |              |      |      |            |             |
+|     ie_ep0/core_clk |BUFGCTRL_X0Y14| No   |   97 |  0.413     |  2.014      |
++---------------------+--------------+------+------+------------+-------------+
+|                dclk | BUFGCTRL_X0Y9| No   |   75 |  0.384     |  2.125      |
++---------------------+--------------+------+------+------------+-------------+
+|xillybus_ins/pcie/pc |              |      |      |            |             |
+|ie_ep0/REFCLK_OUT_bu |              |      |      |            |             |
+|                  fg | BUFGCTRL_X0Y2| No   |    7 |  0.247     |  2.006      |
++---------------------+--------------+------+------+------------+-------------+
+|xillybus_ins/pcie/pc |              |      |      |            |             |
+|ie_ep0/pcie_blk/SIO/ |              |      |      |            |             |
+|.pcie_gt_wrapper_i/i |              |      |      |            |             |
+|         cdrreset<0> |         Local|      |    1 |  0.000     |  0.671      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 1049 (Setup: 1049, Hold: 0, Component Switching Limit: 0)
+
+WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
+   your design.
+
+   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
+   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
+
+   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to
+   ensure the best options are set in the tools for timing closure.
+
+   Use the Xilinx "SmartXplorer" script to try special combinations of
+   options known to produce very good results.
+
+   Visit the Xilinx technical support web at http://support.xilinx.com and go to
+   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
+   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
+   in your design.
+
+Number of Timing Constraints that were not applied: 3
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_DCLK = PERIOD TIMEGRP "DCLK" 200 MHz H | SETUP       |    -0.078ns|     5.156ns|      29|        1049
+  IGH 50%                                   | HOLD        |     0.419ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  PERIOD analysis for net "xillybus_ins/pci | SETUP       |     0.029ns|     3.971ns|       0|           0
+  e/pcie_ep0/pcie_blk/clocking_i/clkout0" d | HOLD        |     0.285ns|            |       0|           0
+  erived from  NET "pcie_ref_clk" PERIOD =  | MINPERIOD   |     0.000ns|     4.000ns|       0|           0
+  10 ns HIGH 50%                            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_xillybus_ins_pcie_pcie_ep0_pcie_blk_cl | MINPERIOD   |     0.000ns|     4.000ns|       0|           0
+  ocking_i_clkout0 = PERIOD TIMEGRP         |             |            |            |        |            
+   "xillybus_ins_pcie_pcie_ep0_pcie_blk_clo |             |            |            |        |            
+  cking_i_clkout0" TS_MGTCLK *         2.5  |             |            |            |        |            
+  HIGH 50%                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PERIOD analysis for net "xillybus_ins/pci | SETUP       |     0.070ns|    15.720ns|       0|           0
+  e/pcie_ep0/pcie_blk/clocking_i/clkout1" d | HOLD        |     0.042ns|            |       0|           0
+  erived from  NET "pcie_ref_clk" PERIOD =  |             |            |            |        |            
+  10 ns HIGH 50%                            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Pin to Pin Skew Constraint                | MAXDELAY    |     0.163ns|     0.650ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_MGTCLK = PERIOD TIMEGRP "MGTCLK" 100 M | MINLOWPULSE |     6.000ns|     4.000ns|       0|           0
+  Hz HIGH 50%                               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "pcie_ref_clk" PERIOD = 10 ns HIGH 50 | SETUP       |     4.505ns|     5.495ns|       0|           0
+  %                                         | HOLD        |     0.675ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_xillybus_ins_pcie_pcie_ep0_pcie_blk_cl | MINPERIOD   |     8.000ns|     8.000ns|       0|           0
+  ocking_i_clkout1 = PERIOD TIMEGRP         |             |            |            |        |            
+   "xillybus_ins_pcie_pcie_ep0_pcie_blk_clo |             |            |            |        |            
+  cking_i_clkout1" TS_MGTCLK *         0.62 |             |            |            |        |            
+  5 HIGH 50%                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for pcie_ref_clk
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|pcie_ref_clk                   |     10.000ns|      5.495ns|     10.000ns|            0|            0|          298|       205146|
+| xillybus_ins/pcie/pcie_ep0/pci|      4.000ns|      4.000ns|          N/A|            0|            0|         1352|            0|
+| e_blk/clocking_i/clkout0      |             |             |             |             |             |             |             |
+| xillybus_ins/pcie/pcie_ep0/pci|     16.000ns|     15.720ns|          N/A|            0|            0|       203794|            0|
+| e_blk/clocking_i/clkout1      |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_MGTCLK
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_MGTCLK                      |     10.000ns|      4.000ns|     10.000ns|            0|            0|            0|            0|
+| TS_xillybus_ins_pcie_pcie_ep0_|      4.000ns|      4.000ns|          N/A|            0|            0|            0|            0|
+| pcie_blk_clocking_i_clkout0   |             |             |             |             |             |             |             |
+| TS_xillybus_ins_pcie_pcie_ep0_|     16.000ns|      8.000ns|          N/A|            0|            0|            0|            0|
+| pcie_blk_clocking_i_clkout1   |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 3 mins 58 secs 
+Total CPU time to PAR completion: 4 mins 8 secs 
+
+Peak Memory Usage:  713 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - 29 errors found.
+
+Number of error messages: 0
+Number of warning messages: 1
+Number of info messages: 0
+
+Writing design to file top.ncd
+
+
+
+PAR done!

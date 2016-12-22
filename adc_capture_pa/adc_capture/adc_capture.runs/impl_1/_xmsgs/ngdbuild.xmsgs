@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">MGTCLK</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_MGTCLK</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">xillybus_ins/pcie/pcie_ep0/pcie_blk/clocking_i/use_pll.pll_adv_i</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_xillybus_ins_pcie_pcie_ep0_pcie_blk_clocking_i_clkout0 = PERIOD &quot;xillybus_ins_pcie_pcie_ep0_pcie_blk_clocking_i_clkout0&quot; TS_MGTCLK * 2.5 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">MGTCLK</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_MGTCLK</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">xillybus_ins/pcie/pcie_ep0/pcie_blk/clocking_i/use_pll.pll_adv_i</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT1</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_xillybus_ins_pcie_pcie_ep0_pcie_blk_clocking_i_clkout1 = PERIOD &quot;xillybus_ins_pcie_pcie_ep0_pcie_blk_clocking_i_clkout1&quot; TS_MGTCLK * 0.625 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;NET &quot;pcie_ref_clk&quot; PERIOD = 10 ns;&gt; [top.ucf(34)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
+</msg>
+
+</messages>
+

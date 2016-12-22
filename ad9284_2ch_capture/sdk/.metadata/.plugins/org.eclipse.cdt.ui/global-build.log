@@ -1,0 +1,563 @@
+10:21:31 **** Build of project spi_ctrl_bsp ****
+make -k all 
+libgen -hw ../spi_ctrl_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../spi_ctrl_hw_platform/system.xml -pe microblaze_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.a  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.a  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling bram"
+"Compiling gpio"
+"Compiling spi"
+"Compiling uartlite"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+10:21:58 **** Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2662	    292	   2088	   5042	   13b2	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '
+13:11:27 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2662	    292	   2200	   5154	   1422	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '
+15:11:15 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10378	    344	   2214	  12936	   3288	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '
+15:33:41 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11938	    360	   2214	  14512	   38b0	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '
+16:02:29 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:9: warning: unused variable 'i' [-Wunused-variable]
+../src/helloworld.c: In function 'Init_spi':
+../src/helloworld.c:76:40: error: 'SPI_DEV_ID' undeclared (first use in this function)
+../src/helloworld.c:76:40: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'Init_GPIO':
+../src/helloworld.c:106:2: warning: implicit declaration of function 'pause' [-Wimplicit-function-declaration]
+../src/helloworld.c: At top level:
+../src/helloworld.c:113:6: warning: conflicting types for 'pause' [enabled by default]
+../src/helloworld.c:106:2: note: previous implicit declaration of 'pause' was here
+../src/helloworld.c:147:6: error: conflicting types for 'WriteSPIReg'
+../src/helloworld.c:59:6: note: previous declaration of 'WriteSPIReg' was here
+../src/helloworld.c: In function 'ReadSPIReg':
+../src/helloworld.c:171:45: error: 'ReadBuffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+16:03:02 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:9: warning: unused variable 'i' [-Wunused-variable]
+../src/helloworld.c: In function 'Init_GPIO':
+../src/helloworld.c:106:2: warning: implicit declaration of function 'pause' [-Wimplicit-function-declaration]
+../src/helloworld.c: At top level:
+../src/helloworld.c:113:6: warning: conflicting types for 'pause' [enabled by default]
+../src/helloworld.c:106:2: note: previous implicit declaration of 'pause' was here
+../src/helloworld.c:147:6: error: conflicting types for 'WriteSPIReg'
+../src/helloworld.c:59:6: note: previous declaration of 'WriteSPIReg' was here
+../src/helloworld.c: In function 'ReadSPIReg':
+../src/helloworld.c:171:45: error: 'ReadBuffer' undeclared (first use in this function)
+../src/helloworld.c:171:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+16:04:41 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:9: warning: unused variable 'i' [-Wunused-variable]
+../src/helloworld.c: In function 'Init_GPIO':
+../src/helloworld.c:106:2: warning: implicit declaration of function 'pause' [-Wimplicit-function-declaration]
+../src/helloworld.c: At top level:
+../src/helloworld.c:113:6: warning: conflicting types for 'pause' [enabled by default]
+../src/helloworld.c:106:2: note: previous implicit declaration of 'pause' was here
+../src/helloworld.c: In function 'ReadSPIReg':
+../src/helloworld.c:171:45: error: 'ReadBuffer' undeclared (first use in this function)
+../src/helloworld.c:171:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+16:05:39 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:9: warning: unused variable 'i' [-Wunused-variable]
+../src/helloworld.c: In function 'Init_GPIO':
+../src/helloworld.c:109:2: warning: implicit declaration of function 'pause' [-Wimplicit-function-declaration]
+../src/helloworld.c: At top level:
+../src/helloworld.c:116:6: warning: conflicting types for 'pause' [enabled by default]
+../src/helloworld.c:109:2: note: previous implicit declaration of 'pause' was here
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:75:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13694	    356	   2232	  16282	   3f9a	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '
+16:35:19 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:74:5: warning: implicit declaration of function 'writeSPIReg' [-Wimplicit-function-declaration]
+../src/helloworld.c:80:13: error: expected expression before '{' token
+../src/helloworld.c:82:13: error: expected expression before '{' token
+../src/helloworld.c:89:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+16:37:01 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:74:5: warning: implicit declaration of function 'writeSPIReg' [-Wimplicit-function-declaration]
+../src/helloworld.c:91:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/helloworld.c:74: undefined reference to `writeSPIReg'
+E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/helloworld.c:76: undefined reference to `writeSPIReg'
+collect2: ld returned 1 exit status
+make: *** [spi_ctrl.elf] Error 1
+16:37:20 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:91:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13646	    356	   2232	  16234	   3f6a	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '
+16:37:39 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13650	    356	   2242	  16248	   3f78	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '
+16:38:54 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13678	    356	   2232	  16266	   3f8a	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '
+16:39:44 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13754	    356	   2242	  16352	   3fe0	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '
+16:40:52 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/adc_spi_config.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/adc_spi_config.d" -MT"src/adc_spi_config.d" -o "src/adc_spi_config.o" "../src/adc_spi_config.c"
+'Finished building: ../src/adc_spi_config.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/adc_spi_config.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o:(.data+0x0): multiple definition of `set_op_format'
+./src/adc_spi_config.o:(.data+0x0): first defined here
+./src/helloworld.o:(.data+0x4): multiple definition of `sel_ch_a'
+./src/adc_spi_config.o:(.data+0x4): first defined here
+./src/helloworld.o:(.data+0x8): multiple definition of `set_off'
+./src/adc_spi_config.o:(.data+0x8): first defined here
+./src/helloworld.o: In function `main':
+E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/helloworld.c:67: multiple definition of `Addr'
+./src/adc_spi_config.o:E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/adc_spi_config.c:35: first defined here
+./src/helloworld.o: In function `main':
+E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/helloworld.c:67: multiple definition of `main'
+./src/adc_spi_config.o:E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/adc_spi_config.c:35: first defined here
+./src/helloworld.o: In function `Init_GPIO':
+E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/helloworld.c:110: multiple definition of `Init_GPIO'
+./src/adc_spi_config.o:E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/adc_spi_config.c:78: first defined here
+./src/helloworld.o: In function `Init_spi':
+E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/helloworld.c:92: multiple definition of `Init_spi'
+./src/adc_spi_config.o:E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/adc_spi_config.c:60: first defined here
+./src/helloworld.o: In function `WriteSPIReg':
+E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/helloworld.c:136: multiple definition of `WriteSPIReg'
+./src/adc_spi_config.o:E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/adc_spi_config.c:104: first defined here
+./src/helloworld.o: In function `ReadSPIReg':
+E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/helloworld.c:157: multiple definition of `ReadSPIReg'
+./src/adc_spi_config.o:E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/adc_spi_config.c:125: first defined here
+./src/helloworld.o: In function `pause':
+E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/helloworld.c:131: multiple definition of `pause'
+./src/adc_spi_config.o:E:\xillybus_adc_capture\ad9284_2ch_capture\sdk\spi_ctrl\Debug/../src/adc_spi_config.c:99: first defined here
+collect2: ld returned 1 exit status
+make: *** [spi_ctrl.elf] Error 1
+16:41:07 **** Clean-only build of configuration Debug for project spi_ctrl ****
+make clean 
+rm -rf  ./src/adc_spi_config.o ./src/helloworld.o ./src/platform.o  ./src/adc_spi_config.d ./src/helloworld.d ./src/platform.d  spi_ctrl.elf.size  spi_ctrl.elf.elfcheck  spi_ctrl.elf
+' '
+16:41:07 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/adc_spi_config.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/adc_spi_config.d" -MT"src/adc_spi_config.d" -o "src/adc_spi_config.o" "../src/adc_spi_config.c"
+'Finished building: ../src/adc_spi_config.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/adc_spi_config.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13754	    356	   2234	  16344	   3fd8	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '
+16:41:16 **** Incremental Build of configuration Debug for project spi_ctrl ****
+make all 
+make: Nothing to be done for `all'.
+16:46:29 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/adc_spi_config.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/adc_spi_config.d" -MT"src/adc_spi_config.d" -o "src/adc_spi_config.o" "../src/adc_spi_config.c"
+'Finished building: ../src/adc_spi_config.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/adc_spi_config.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13694	    356	   2224	  16274	   3f92	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '
+16:50:38 **** Auto Build of configuration Debug for project spi_ctrl ****
+make all 
+'Building file: ../src/adc_spi_config.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../spi_ctrl_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -MMD -MP -MF"src/adc_spi_config.d" -MT"src/adc_spi_config.d" -o "src/adc_spi_config.o" "../src/adc_spi_config.c"
+'Finished building: ../src/adc_spi_config.c'
+' '
+'Building target: spi_ctrl.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../spi_ctrl_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.a -mno-xl-soft-mul -o "spi_ctrl.elf"  ./src/adc_spi_config.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_ctrl.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_ctrl.elf  |tee "spi_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13694	    356	   2224	  16274	   3f92	spi_ctrl.elf
+'Finished building: spi_ctrl.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck spi_ctrl.elf -hw ../../spi_ctrl_hw_platform/system.xml -pe microblaze_0  |tee "spi_ctrl.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.5 Build EDK_P.58f
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../spi_ctrl_hw_platform/system.xml -pe
+microblaze_0 spi_ctrl.elf 
+
+ELF file	: spi_ctrl.elf
+elfcheck passed.
+'Finished building: spi_ctrl.elf.elfcheck'
+' '

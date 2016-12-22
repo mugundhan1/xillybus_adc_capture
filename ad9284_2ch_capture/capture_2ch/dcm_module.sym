@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="dcm_module">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2016-6-8T10:22:17</timestamp>
+    <pin polarity="Input" x="0" y="-160" name="RST_IN" />
+    <pin polarity="Output" x="464" y="-160" name="LOCKED_OUT" />
+    <pin polarity="Output" x="464" y="-32" name="CLK0_OUT" />
+    <pin polarity="Input" x="0" y="32" name="CLKIN_P_IN" />
+    <pin polarity="Input" x="0" y="96" name="CLKIN_N_IN" />
+    <pin polarity="Output" x="464" y="32" name="CLKIN_IBUFGDS_OUT" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="232" y="-200" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin RST_IN" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-160" type="pin LOCKED_OUT" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-32" type="pin CLK0_OUT" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="32" type="pin CLKIN_P_IN" />
+        <line x2="0" y1="32" y2="32" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="96" type="pin CLKIN_N_IN" />
+        <line x2="0" y1="96" y2="96" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="32" type="pin CLKIN_IBUFGDS_OUT" />
+        <line x2="464" y1="32" y2="32" x1="400" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <line x2="464" y1="-160" y2="-160" x1="400" />
+        <line x2="464" y1="-32" y2="-32" x1="400" />
+        <rect width="336" x="64" y="-192" height="320" />
+    </graph>
+</symbol>

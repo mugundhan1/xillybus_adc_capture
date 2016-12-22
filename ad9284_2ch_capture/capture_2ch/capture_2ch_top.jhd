@@ -1,0 +1,21 @@
+MODULE capture_2ch_top
+	SUBMODULE ad9284_fe
+		INSTANCE fe1
+	SUBMODULE busmaker
+		INSTANCE bmch1
+	SUBMODULE busmaker
+		INSTANCE bmch2
+	SUBMODULE ch_fifo_wrap
+		INSTANCE ch1
+	SUBMODULE ch_fifo_wrap
+		INSTANCE ch2
+	SUBMODULE xillybus
+		INSTANCE xillybus_ins
+	SUBMODULE byte_reorder_8bit
+		INSTANCE XLXI_25
+	SUBMODULE byte_reorder_8bit
+		INSTANCE XLXI_26
+	SUBMODULE capture_control
+		INSTANCE XLXI_28
+	SUBMODULE pll
+		INSTANCE XLXI_31

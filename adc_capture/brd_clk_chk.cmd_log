@@ -1,0 +1,45 @@
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.xst" -ofn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.syr" 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.xst" -ofn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc clk_chk.ucf -p xc5vlx110t-ff1136-1 brd_clk_chk.ngc brd_clk_chk.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o brd_clk_chk_map.ncd brd_clk_chk.ngd brd_clk_chk.pcf 
+par -w -intstyle ise -ol high -mt off brd_clk_chk_map.ncd brd_clk_chk.ncd brd_clk_chk.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml brd_clk_chk.twx brd_clk_chk.ncd -o brd_clk_chk.twr brd_clk_chk.pcf -ucf clk_chk.ucf 
+bitgen -intstyle ise -f brd_clk_chk.ut brd_clk_chk.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.xst" -ofn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc clk_chk.ucf -p xc5vlx110t-ff1136-1 brd_clk_chk.ngc brd_clk_chk.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o brd_clk_chk_map.ncd brd_clk_chk.ngd brd_clk_chk.pcf 
+par -w -intstyle ise -ol high -mt off brd_clk_chk_map.ncd brd_clk_chk.ncd brd_clk_chk.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml brd_clk_chk.twx brd_clk_chk.ncd -o brd_clk_chk.twr brd_clk_chk.pcf -ucf clk_chk.ucf 
+bitgen -intstyle ise -f brd_clk_chk.ut brd_clk_chk.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.xst" -ofn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc clk_chk.ucf -p xc5vlx110t-ff1136-1 brd_clk_chk.ngc brd_clk_chk.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o brd_clk_chk_map.ncd brd_clk_chk.ngd brd_clk_chk.pcf 
+par -w -intstyle ise -ol high -mt off brd_clk_chk_map.ncd brd_clk_chk.ncd brd_clk_chk.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml brd_clk_chk.twx brd_clk_chk.ncd -o brd_clk_chk.twr brd_clk_chk.pcf -ucf clk_chk.ucf 
+bitgen -intstyle ise -f brd_clk_chk.ut brd_clk_chk.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.xst" -ofn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc clk_chk.ucf -p xc5vlx110t-ff1136-1 brd_clk_chk.ngc brd_clk_chk.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o brd_clk_chk_map.ncd brd_clk_chk.ngd brd_clk_chk.pcf 
+par -w -intstyle ise -ol high -mt off brd_clk_chk_map.ncd brd_clk_chk.ncd brd_clk_chk.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml brd_clk_chk.twx brd_clk_chk.ncd -o brd_clk_chk.twr brd_clk_chk.pcf -ucf clk_chk.ucf 
+bitgen -intstyle ise -f brd_clk_chk.ut brd_clk_chk.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.xst" -ofn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.syr" 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.xst" -ofn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc clk_chk.ucf -p xc5vlx110t-ff1136-1 brd_clk_chk.ngc brd_clk_chk.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc clk_chk.ucf -p xc5vlx110t-ff1136-1 brd_clk_chk.ngc brd_clk_chk.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o brd_clk_chk_map.ncd brd_clk_chk.ngd brd_clk_chk.pcf 
+par -w -intstyle ise -ol high -mt off brd_clk_chk_map.ncd brd_clk_chk.ncd brd_clk_chk.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml brd_clk_chk.twx brd_clk_chk.ncd -o brd_clk_chk.twr brd_clk_chk.pcf -ucf clk_chk.ucf 
+bitgen -intstyle ise -f brd_clk_chk.ut brd_clk_chk.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.xst" -ofn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc clk_chk.ucf -p xc5vlx110t-ff1136-1 brd_clk_chk.ngc brd_clk_chk.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o brd_clk_chk_map.ncd brd_clk_chk.ngd brd_clk_chk.pcf 
+par -w -intstyle ise -ol high -mt off brd_clk_chk_map.ncd brd_clk_chk.ncd brd_clk_chk.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml brd_clk_chk.twx brd_clk_chk.ncd -o brd_clk_chk.twr brd_clk_chk.pcf -ucf clk_chk.ucf 
+bitgen -intstyle ise -f brd_clk_chk.ut brd_clk_chk.ncd 
+xst -intstyle ise -ifn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.xst" -ofn "E:/xillybus_adc_capture/adc_capture/brd_clk_chk.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc clk_chk.ucf -p xc5vlx110t-ff1136-1 brd_clk_chk.ngc brd_clk_chk.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o brd_clk_chk_map.ncd brd_clk_chk.ngd brd_clk_chk.pcf 
+par -w -intstyle ise -ol high -mt off brd_clk_chk_map.ncd brd_clk_chk.ncd brd_clk_chk.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml brd_clk_chk.twx brd_clk_chk.ncd -o brd_clk_chk.twr brd_clk_chk.pcf -ucf clk_chk.ucf 
+bitgen -intstyle ise -f brd_clk_chk.ut brd_clk_chk.ncd 

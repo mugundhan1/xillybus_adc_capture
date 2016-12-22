@@ -1,0 +1,140 @@
+#include "mb_interface.h"
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xbasic_types.h"
+#include "xgpio.h"
+#include "xuartlite.h"
+#include "xspi.h"
+#include "xspi_l.h"
+
+#define GPIO_DEV_ID XPAR_GENERIC_GPIO_DEVICE_ID
+#define SPI_DEVICE_ID		XPAR_SPI_0_DEVICE_ID
+#define SPI_BASE_ADDR 		XPAR_SPI_0_BASEADDR
+#define SPI_SELECT 0x01
+
+XGpio GPIO_INST;
+XSpi SPI_INST;
+XStatus Status;
+
+u8 set_op_format[3]={0x00,0x14,0x11}; // sets output format
+u8 sel_ch_a[3]= {0x00,0x05,0x01}; //selects channel A
+u8 set_off[3]={0x00,0x10,0x02}; //sets channel A ADC offset to +2
+u8 Addr[2]={0};
+u8 ReadBuffer[10];
+
+
+void Init_GPIO(void);
+void Init_spi(void);
+void WriteSPIReg(u8 *Data, char ch);
+void ReadSPIReg(u8 *Address);
+void pause(u32 delay);
+
+int main()
+{	print("*************SPI Configuration Program************** \n\r");
+    Init_GPIO();
+    Init_spi();
+    Status = XSpi_Stop(&SPI_INST);
+    print("************Setting ADC Config Registers: ********** \n\r");
+    WriteSPIReg(set_op_format,'C');
+    print("************    Selecting ADC Channel A   ********** \n\r");
+    WriteSPIReg(sel_ch_a,'C');
+	print("************   Setting Channel A offset   ********** \n\r");
+	WriteSPIReg(set_off,'D');
+
+	print("************   Reading Memory Registers   ********** \n\r");
+	print("************     Output Data Format       ********** \n\r");
+	Addr[0]=0x80;Addr[1]=0x14;
+	ReadSPIReg(Addr);
+	print("************     Channel Offset           ********** \n\r");
+	Addr[0]=0x80;Addr[1]=0x10;
+	ReadSPIReg(Addr);
+
+	print("************   SPI TRANSFERS SUCCESS      ********** \n\r");
+
+	XGpio_DiscreteWrite(&GPIO_INST, 1, 0x03); // led on if config is done :)
+	return 0;
+}
+
+void Init_spi(void)
+{
+		Status = XSpi_Initialize(&SPI_INST , SPI_DEVICE_ID);
+			if (Status == XST_SUCCESS)
+				{xil_printf("Successfully initialised SPI \n\r");}
+			else
+				{xil_printf("Failure!!! \n\r");}
+
+
+
+		Status = XSpi_SetOptions(&SPI_INST, XSP_MASTER_OPTION );
+			if (Status == XST_SUCCESS)
+				{xil_printf("Successfully set SPI as master \n\r");}
+			else
+				{xil_printf("Failed to set SPI in master mode ! \n\r");}
+
+}
+
+void Init_GPIO(void)
+{
+//Initialize GPIO
+	Status = XGpio_Initialize(&GPIO_INST , GPIO_DEV_ID );
+    			if (Status == XST_SUCCESS)
+    				{xil_printf("Successfully initialized GPIO \n\r");}
+    			else
+    				{xil_printf("Failure!!! \n\r");}
+
+    XGpio_SetDataDirection(&GPIO_INST, 1 ,0x00);
+    //blink led twice to say I'm ready !
+	XGpio_DiscreteWrite(&GPIO_INST, 1, 0x03);
+	pause(1250000);
+	XGpio_DiscreteWrite(&GPIO_INST, 1, 0x00);
+	pause(1250000);
+
+	xil_printf("GPIO INITIALIZATION COMPLETE \n\r");
+}
+
+void pause(u32 Delay)
+{	Xuint32 j;
+	for (j=0;j<Delay;j++);
+}
+
+void WriteSPIReg(u8 *Data, char ch)
+{
+	u8 TransferReg[3] = {0x00 ,0xFF, 0x01};
+	Status = XSpi_Start(&SPI_INST);
+	if (Status != XST_SUCCESS) {
+			xil_printf("Failed to Start SPI !\n\r");
+	}
+
+	XSpi_IntrGlobalDisable(&SPI_INST);
+
+	if (ch == 'C')
+		XSpi_Transfer(&SPI_INST, Data, NULL, 3);
+	else if (ch=='D')
+		{
+		 XSpi_Transfer(&SPI_INST, Data, NULL, 3);
+	   	 XSpi_Transfer(&SPI_INST, TransferReg, NULL, 3);
+		}
+	else
+		print("Enter a valid choice: C for config. register, D for shadow register \n\r");
+
+	XSpi_Stop(&SPI_INST);
+}
+
+
+void ReadSPIReg(u8 *Address)
+{
+	Status = XSpi_Start(&SPI_INST);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Failed to Start SPI !\n\r");
+		}
+	XSpi_IntrGlobalDisable(&SPI_INST);
+	Status = XSpi_Transfer(&SPI_INST, Address, ReadBuffer, 3);
+		if (Status != XST_SUCCESS) {
+			xil_printf("Failed Transfer ! Try Again !!! \n\r");
+		}
+	Status = XSpi_Stop(&SPI_INST);
+
+	xil_printf("Data Value in Receive Register is 0x%x \n\r",XSpi_ReadReg(SPI_BASE_ADDR,0x6C));
+	xil_printf("The Value present in Address 0x%x is 0x%x \n\r", Address[1], ReadBuffer[2]);
+}

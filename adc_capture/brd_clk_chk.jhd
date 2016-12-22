@@ -1,0 +1,11 @@
+MODULE brd_clk_chk
+	SUBMODULE adc_8_fifo
+		INSTANCE XLXI_3
+	SUBMODULE xillybus
+		INSTANCE xillybus_ins
+	SUBMODULE cc
+		INSTANCE XLXI_17
+	SUBMODULE dcm_clkcl
+		INSTANCE XLXI_21
+	SUBMODULE byte_reorder_16
+		INSTANCE XLXI_22

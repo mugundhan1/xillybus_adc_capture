@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="capture_2ch.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="ad9284_fe.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ad9284_fe.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="busmaker.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="busmaker.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="byte_reorder_8bit.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="byte_reorder_8bit.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="capture_2ch_top.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="capture_2ch_top.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="capture_2ch_top.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="capture_2ch_top.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="capture_2ch_top.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="capture_2ch_top.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="capture_2ch_top.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="capture_2ch_top.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="capture_2ch_top.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="capture_2ch_top.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="capture_2ch_top.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="capture_2ch_top.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="capture_2ch_top.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="capture_2ch_top.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="capture_2ch_top.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="capture_2ch_top.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="capture_2ch_top.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="capture_2ch_top.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="capture_2ch_top.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="capture_2ch_top.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="capture_2ch_top.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="capture_2ch_top.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="capture_2ch_top.vf"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="capture_2ch_top.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="capture_2ch_top.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="capture_2ch_top_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="capture_2ch_top_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="capture_2ch_top_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="capture_2ch_top_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="capture_2ch_top_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="capture_2ch_top_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="capture_2ch_top_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="capture_2ch_top_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="capture_2ch_top_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="capture_2ch_top_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="capture_2ch_top_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="capture_2ch_top_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="capture_2ch_top_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="capture_2ch_top_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="capture_2ch_top_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="capture_control.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="capture_control.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="ch_fifo_wrap.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ch_fifo_wrap.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="dcm_module.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="dcm_module.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="dcm_module.v"/>
+    <file xil_pn:fileType="FILE_UCF" xil_pn:name="dcm_module_arwz.ucf" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="ipcore_dir/dcm_module.v" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="ipcore_dir/pll.v" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="pll.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="pll.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="pll.v"/>
+    <file xil_pn:fileType="FILE_UCF" xil_pn:name="pll_arwz.ucf" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="spi_ctrl.ncf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl.ngc"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="spi_ctrl.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="spi_ctrl.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITINIT_OPT" xil_pn:name="spi_ctrl/__xps/bitinit.opt" xil_pn:origination="imported" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPS_SIM" xil_pn:name="spi_ctrl/__xps/ise/spi_ctrl.xpssim" xil_pn:origination="imported" xil_pn:subbranch="Par">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XPS_SYN" xil_pn:name="spi_ctrl/__xps/ise/spi_ctrl.xpssyn" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XPS_UPB" xil_pn:name="spi_ctrl/__xps/ise/spi_ctrl.xpsupb" xil_pn:origination="imported" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PLATGEN_OPT" xil_pn:name="spi_ctrl/__xps/platgen.opt" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XPS_UCF" xil_pn:name="spi_ctrl/data/spi_ctrl.ucf" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_MHS" xil_pn:name="spi_ctrl/spi_ctrl.mhs" xil_pn:origination="imported" xil_pn:subbranch="FPGAConfiguration">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="spi_ctrl_clock_generator_0_wrapper.ncf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_clock_generator_0_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_dlmb_cntlr_wrapper.ngc"/>
+    <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="spi_ctrl_dlmb_wrapper.ncf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_dlmb_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_generic_gpio_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_generic_spi_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_ilmb_cntlr_wrapper.ngc"/>
+    <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="spi_ctrl_ilmb_wrapper.ncf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_ilmb_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_lmb_bram_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_mb_plb_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_mdm_0_wrapper.ngc"/>
+    <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="spi_ctrl_microblaze_0_wrapper.ncf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_microblaze_0_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_proc_sys_reset_0_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="spi_ctrl_rs232_wrapper.ngc"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="xaw2verilog.log"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="xillybus.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="xillybus.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1465384654" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1465384654">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1465977358" xil_pn:in_ck="4589786334097389998" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7671273412250745369" xil_pn:start_ts="1465977355">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="capture_2ch_top.vf"/>
+    </transform>
+    <transform xil_pn:end_ts="1465384660" xil_pn:in_ck="3965472566890305365" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8036351480785718770" xil_pn:start_ts="1465384659">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/ch_fifo.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/ch_fifo.v"/>
+    </transform>
+    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1465977361" xil_pn:in_ck="-6602781434145560677" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="2177270078857751289" xil_pn:start_ts="1465977358">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="dcm_module.v"/>
+      <outfile xil_pn:name="pll.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1465385935" xil_pn:in_ck="1733386191413222500" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-8458126479482839362" xil_pn:start_ts="1465385935">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1465392012" xil_pn:in_ck="495557725941731343" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="1214450365878024472" xil_pn:start_ts="1465390551">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="spi_ctrl.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_clock_generator_0_wrapper.ncf"/>
+      <outfile xil_pn:name="spi_ctrl_clock_generator_0_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_dlmb_cntlr_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_dlmb_wrapper.ncf"/>
+      <outfile xil_pn:name="spi_ctrl_dlmb_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_generic_gpio_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_generic_spi_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_ilmb_cntlr_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_ilmb_wrapper.ncf"/>
+      <outfile xil_pn:name="spi_ctrl_ilmb_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_lmb_bram_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_mb_plb_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_mdm_0_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_microblaze_0_wrapper.ncf"/>
+      <outfile xil_pn:name="spi_ctrl_microblaze_0_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_proc_sys_reset_0_wrapper.ngc"/>
+      <outfile xil_pn:name="spi_ctrl_rs232_wrapper.ngc"/>
+    </transform>
+    <transform xil_pn:end_ts="1465977551" xil_pn:in_ck="1396308585148654972" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="-1761382391394327764" xil_pn:start_ts="1465977361">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="capture_2ch_top.jhd"/>
+      <outfile xil_pn:name="capture_2ch_top.lso"/>
+      <outfile xil_pn:name="capture_2ch_top.ngc"/>
+      <outfile xil_pn:name="capture_2ch_top.ngr"/>
+      <outfile xil_pn:name="capture_2ch_top.prj"/>
+      <outfile xil_pn:name="capture_2ch_top.stx"/>
+      <outfile xil_pn:name="capture_2ch_top.syr"/>
+      <outfile xil_pn:name="capture_2ch_top.xst"/>
+      <outfile xil_pn:name="capture_2ch_top_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1465977617" xil_pn:in_ck="154288920063" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="350472751647374372" xil_pn:start_ts="1465977617">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1465977639" xil_pn:in_ck="-926040588105875394" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4133411265820031031" xil_pn:start_ts="1465977617">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="capture_2ch_top.bld"/>
+      <outfile xil_pn:name="capture_2ch_top.ngd"/>
+      <outfile xil_pn:name="capture_2ch_top_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="spi_ctrl.ncf"/>
+    </transform>
+    <transform xil_pn:end_ts="1465977929" xil_pn:in_ck="5361627782602390216" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="6733564432430981316" xil_pn:start_ts="1465977639">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="capture_2ch_top.pcf"/>
+      <outfile xil_pn:name="capture_2ch_top_map.map"/>
+      <outfile xil_pn:name="capture_2ch_top_map.mrp"/>
+      <outfile xil_pn:name="capture_2ch_top_map.ncd"/>
+      <outfile xil_pn:name="capture_2ch_top_map.ngm"/>
+      <outfile xil_pn:name="capture_2ch_top_map.xrpt"/>
+      <outfile xil_pn:name="capture_2ch_top_summary.xml"/>
+      <outfile xil_pn:name="capture_2ch_top_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1465978139" xil_pn:in_ck="7377341767035416641" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-4097515898943074650" xil_pn:start_ts="1465977929">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="capture_2ch_top.ncd"/>
+      <outfile xil_pn:name="capture_2ch_top.pad"/>
+      <outfile xil_pn:name="capture_2ch_top.par"/>
+      <outfile xil_pn:name="capture_2ch_top.ptwx"/>
+      <outfile xil_pn:name="capture_2ch_top.unroutes"/>
+      <outfile xil_pn:name="capture_2ch_top.xpi"/>
+      <outfile xil_pn:name="capture_2ch_top_pad.csv"/>
+      <outfile xil_pn:name="capture_2ch_top_pad.txt"/>
+      <outfile xil_pn:name="capture_2ch_top_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1465980653" xil_pn:in_ck="4589786334097384549" xil_pn:name="TRANEXT_bitFile_virtex5" xil_pn:prop_ck="1555517831305455702" xil_pn:start_ts="1465980528">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="capture_2ch_top.bgn"/>
+      <outfile xil_pn:name="capture_2ch_top.bit"/>
+      <outfile xil_pn:name="capture_2ch_top.drc"/>
+      <outfile xil_pn:name="capture_2ch_top.ut"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1465447609" xil_pn:in_ck="-7598639379151919564" xil_pn:name="TRAN_exportToSDK" xil_pn:prop_ck="4296800" xil_pn:start_ts="1465447543">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1465980686" xil_pn:in_ck="4589786334097371695" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="7814804799388247210" xil_pn:start_ts="1465980683">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1465978139" xil_pn:in_ck="5361622156967917252" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1465978103">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="capture_2ch_top.twr"/>
+      <outfile xil_pn:name="capture_2ch_top.twx"/>
+    </transform>
+    <transform xil_pn:name="TRAN_exportToSDKnobit">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>

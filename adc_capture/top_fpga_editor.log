@@ -1,0 +1,189 @@
+#:C79    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.58f
+#Current Working Directory:
+#:D   E:\xillybus_adc_capture\adc_capture
+#Date/Time:
+#:T   Mon May 30 14:41:36 2016
+#------------------------------
+	#Reading top.ncd...
+	#Loading device for application Rf_Device from file '5vlx110t.nph' in environment E:\Xilinx\14.5\ISE_DS\ISE\.
+	#   "top" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
+	#Design creation date: 2016.05.30.08.37.03
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+post find
+	#3
+unpost find
+	#4
+select -k comp 'cc/counter<3>'
+	#5
+unselect comp 'cc/counter<3>'
+	#6
+select -k comp 'cc/counter<7>'
+	#7
+unselect comp 'cc/counter<7>'
+	#8
+select -k comp 'cc/counter<3>'
+	#9
+unselect comp 'cc/counter<3>'
+	#10
+select -k comp 'cc/counter<7>'
+	#11
+unselect comp 'cc/counter<7>'
+	#12
+select -k comp 'cc/counter<3>'
+	#13
+unselect comp 'cc/counter<3>'
+	#14
+select -k comp 'cc/counter<7>'
+	#15
+unselect comp 'cc/counter<7>'
+	#16
+select -k comp 'cc/counter<11>'
+	#17
+unselect comp 'cc/counter<11>'
+	#18
+select -k comp 'cc/counter<15>'
+	#19
+unselect comp 'cc/counter<15>'
+	#20
+select -k comp 'cc/dv'
+	#21
+unselect comp 'cc/dv'
+	#22
+select -k comp 'clk_cond/CLK0_BUFG_INST'
+	#23
+unselect comp 'clk_cond/CLK0_BUFG_INST'
+	#24
+select -k comp 'clk_cond/DCM_ADV_INST'
+	#25
+unselect comp 'clk_cond/DCM_ADV_INST'
+	#26
+select -k comp 'clk_cond/CLK0_BUFG_INST'
+	#27
+unselect comp 'clk_cond/CLK0_BUFG_INST'
+	#28
+select -k comp 'clk_cond/DCM_ADV_INST'
+	#29
+unselect comp 'clk_cond/DCM_ADV_INST'
+	#30
+select -k comp 'cc/counter<15>'
+	#31
+unselect comp 'cc/counter<15>'
+	#32
+select -k comp 'd_n<0>'
+	#33
+unselect comp 'd_n<0>'
+	#34
+select -k comp 'd_n<1>'
+	#35
+unselect comp 'd_n<1>'
+	#36
+select -k comp 'd_n<2>'
+	#37
+unselect comp 'd_n<2>'
+	#38
+select -k comp 'd_n<3>'
+	#39
+unselect comp 'd_n<3>'
+	#40
+select -k comp 'd_n<4>'
+	#41
+unselect comp 'd_n<4>'
+	#42
+select -k comp 'd_n<5>'
+	#43
+unselect comp 'd_n<5>'
+	#44
+select -k comp 'd_p<0>'
+	#45
+unselect comp 'd_p<0>'
+	#46
+select -k comp 'd_p<1>'
+	#47
+unselect comp 'd_p<1>'
+	#48
+select -k comp 'pcieclk_ibuf'
+	#49
+unselect comp 'pcieclk_ibuf'
+	#50
+select -k comp 'xillybus_ins/cfg_dcommand<5>'
+	#51
+unselect comp 'xillybus_ins/cfg_dcommand<5>'
+	#52
+select -k comp 'xillybus_ins/cfg_dcommand<12>'
+	#53
+unselect comp 'xillybus_ins/cfg_dcommand<12>'
+	#54
+select -k comp 'xillybus_ins/cfg_dcommand<14>'
+	#55
+unselect comp 'xillybus_ins/cfg_dcommand<14>'
+	#56
+select -k comp 'xillybus_ins/cfg_device_number<3>'
+	#57
+setattr main disable_draw on
+	#58
+setattr layer clock_regions view on
+	#59
+setattr main disable_draw off
+	#Hint: change the visibility of more than one layer at a time by clicking on the apply button, clicking two or more layer buttons, and then clicking on the apply button again.
+	#60
+setattr main disable_draw on
+	#61
+setattr layer clock_regions view off
+	#62
+setattr main disable_draw off
+	#63
+setattr main disable_draw on
+	#64
+setattr layer ratsnests view off
+	#65
+setattr main disable_draw off
+	#66
+setattr main disable_draw on
+	#67
+setattr layer routes view off
+	#68
+setattr main disable_draw off
+	#69
+setattr main disable_draw on
+	#70
+setattr layer components view off
+	#71
+setattr main disable_draw off
+	#72
+setattr main disable_draw on
+	#73
+setattr layer hard_macros view off
+	#74
+setattr main disable_draw off
+	#75
+setattr main disable_draw on
+	#76
+setattr layer user_rpms view on
+	#77
+setattr main disable_draw off
+	#78
+setattr main disable_draw on
+	#79
+setattr layer tool_rpms view on
+	#80
+setattr main disable_draw off
+	#81
+setattr main disable_draw on
+	#82
+setattr layer user_rpms view off
+	#83
+setattr main disable_draw off
+	#84
+setattr main disable_draw on
+	#85
+setattr layer tool_rpms view off
+	#86
+setattr main disable_draw off
+	#Hint: click on the apply button to make this change take affect.

@@ -1,0 +1,13 @@
+ISim log file
+Running: E:\xillybus_adc_capture\adc_capture\byte_reorder_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/xillybus_adc_capture/adc_capture/byte_reorder_isim_beh.wdb 
+ISim P.58f (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /byte_reorder/data_in 84838281 -radix hex
+# isim force add /byte_reorder/data_in 84838281 -radix hex
+# run all

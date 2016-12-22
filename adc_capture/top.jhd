@@ -1,0 +1,15 @@
+MODULE top
+	SUBMODULE dcm_clkcl
+		INSTANCE clk_cond
+	SUBMODULE xillybus
+		INSTANCE xillybus_ins
+	SUBMODULE adc_fifo_wrapper
+		INSTANCE adc_ff
+	SUBMODULE capture_control
+		INSTANCE cc
+	SUBMODULE cat
+		INSTANCE XLXI_14
+	SUBMODULE front_end
+		INSTANCE XLXI_15
+	SUBMODULE byte_reorder_16
+		INSTANCE XLXI_16

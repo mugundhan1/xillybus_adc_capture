@@ -1,0 +1,14 @@
+# PROMGEN: Xilinx Prom Generator P.58f
+# Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.58f
+DATE            05/31/2016 - 14:10
+SOURCE          E:\xillybus_adc_capture\mcs_files\capture_64M.mcs
+DEVICE          XCF32P
+DATA_WIDTH      8
+FILL_DATA       0xFF
+SIGNATURE       0x056392FD
+BLOCK 0 VERSION 0 0x056392FD
+BLOCK 1 VERSION 0 0x056392FD
+BLOCK 2 VERSION 0 0x056392FD
+BLOCK 3 VERSION 0 END 0x056392FD

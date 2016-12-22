@@ -1,0 +1,60 @@
+Release 14.5 ngdbuild P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: E:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc sing_chan.ucf -p
+xc5vlx110t-ff1136-1 sing_chan_cap.ngc sing_chan_cap.ngd
+
+Reading NGO file "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.ngc" ...
+Loading design module "ipcore_dir/adc_fifo_8bit.ngc"...
+Loading design module "E:\xillybus_adc_capture\adc_capture/xillybus_core.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "sing_chan.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'MGTCLK', used in period specification
+   'TS_MGTCLK', was traced into PLL_ADV instance
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/clocking_i/use_pll.pll_adv_i. The
+   following new TNM groups and period specifications were generated at the
+   PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_xillybus_ins_pcie_pcie_ep0_pcie_blk_clocking_i_clkout0
+   = PERIOD "xillybus_ins_pcie_pcie_ep0_pcie_blk_clocking_i_clkout0" TS_MGTCLK *
+   2.5 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'MGTCLK', used in period specification
+   'TS_MGTCLK', was traced into PLL_ADV instance
+   xillybus_ins/pcie/pcie_ep0/pcie_blk/clocking_i/use_pll.pll_adv_i. The
+   following new TNM groups and period specifications were generated at the
+   PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_xillybus_ins_pcie_pcie_ep0_pcie_blk_clocking_i_clkout1
+   = PERIOD "xillybus_ins_pcie_pcie_ep0_pcie_blk_clocking_i_clkout1" TS_MGTCLK *
+   0.625 HIGH 50%>
+
+INFO:ConstraintSystem - The Period constraint <NET "pcie_ref_clk"  PERIOD =
+   10ns;> [sing_chan.ucf(24)], is specified using the Net Period method which is
+   not recommended. Please use the Timespec PERIOD method.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 228344 kilobytes
+
+Writing NGD file "sing_chan_cap.ngd" ...
+Total REAL time to NGDBUILD completion:  21 sec
+Total CPU time to NGDBUILD completion:   20 sec
+
+Writing NGDBUILD log file "sing_chan_cap.bld"...

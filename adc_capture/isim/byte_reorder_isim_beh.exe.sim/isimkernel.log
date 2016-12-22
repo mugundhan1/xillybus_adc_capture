@@ -1,0 +1,28 @@
+Command line:
+   byte_reorder_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  62525
+
+Wed Jun 01 10:52:53 2016
+
+
+ Elaboration Time: 0.218401 sec
+
+ Current Memory Usage: 509.587 Meg
+
+ Total Signals          : 15
+ Total Nets             : 77
+ Total Signal Drivers   : 9
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 10
+ Total Traceable Variables  : 18
+ Total Scalar Nets and Variables : 157
+
+ Total Simulation Time: 0.249601 sec
+
+ Current Memory Usage: 509.587 Meg
+
+Wed Jun 01 10:53:24 2016
+

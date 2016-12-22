@@ -1,0 +1,8 @@
+[Inputs]
+dclk
+[Outputs]
+dv
+[BiDir]
+[ATTRIBUTES]
+VeriModel capture_control
+

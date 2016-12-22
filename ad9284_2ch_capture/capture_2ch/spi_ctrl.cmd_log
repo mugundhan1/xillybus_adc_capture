@@ -1,0 +1,4 @@
+vhdtdtfi -lib work E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/spi_ctrl/__xps/spi_ctrl.v -lang verilog -prj capture_2ch -o spi_ctrl.spl -module spi_ctrl -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 spi_ctrl.spl E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/spi_ctrl.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/spi_ctrl/__xps/spi_ctrl.v -lang verilog -prj capture_2ch -o spi_ctrl.spl -module spi_ctrl -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 spi_ctrl.spl E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/spi_ctrl.sym 

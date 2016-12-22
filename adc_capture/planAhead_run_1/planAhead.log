@@ -1,0 +1,251 @@
+#-----------------------------------------------------------
+# PlanAhead v14.5 (64-bit)
+# Build 247527 by xbuild on Mon Mar 25 17:13:07 MDT 2013
+# Start of session at: Mon May 30 16:16:29 2016
+# Process ID: 6472
+# Log file: E:/xillybus_adc_capture/adc_capture/planAhead_run_1/planAhead.log
+# Journal file: E:/xillybus_adc_capture/adc_capture/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from E:/Xilinx/14.5/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [E:/Xilinx/14.5/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [E:/Xilinx/14.5/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source E:/xillybus_adc_capture/adc_capture/pa.fromNcd.tcl
+# create_project -name adc_capture -dir "E:/xillybus_adc_capture/adc_capture/planAhead_run_1" -part xc5vlx110tff1136-1
+create_project: Time (s): elapsed = 00:00:13 . Memory (MB): peak = 409.277 ; gain = 59.234
+# set srcset [get_property srcset [current_run -impl]]
+# set_property design_mode GateLvl $srcset
+# set_property edif_top_file "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {E:/xillybus_adc_capture/adc_capture} {ipcore_dir} }
+# add_files [list {ipcore_dir/adc.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/adc_fifo_8bit.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/data_fifo.ncf}] -fileset [get_property constrset [current_run]]
+# set_property target_constrs_file "sing_chan.ucf" [current_fileset -constrset]
+Adding file 'E:/xillybus_adc_capture/adc_capture/sing_chan.ucf' to fileset 'constrs_1'
+# add_files [list {sing_chan.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc5vlx110tff1136-1
+Release 14.5 - ngc2edif P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design sing_chan_cap.ngc ...
+WARNING:NetListWriters:298 - No output is written to sing_chan_cap.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus cf_bridge/cfg_arb/byte_06<7 : 0> on
+   block pcie_blk_if is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus cf_bridge/cfg_arb/byte_06_mux0000<7 : 0>
+   on block pcie_blk_if is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/error_manager/cfg_hdr_buf/_varindex0000<49 : 42> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/error_manager/cfg_hdr_buf/reg_rdata<49 : 42> on block pcie_blk_if
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/error_manager/reg_cmt_wr_hdr<49 : 0> on block pcie_blk_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/cfg_command<10 : 0> on block pcie_blk_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/cfg_msgctrl<7 : 0> on block pcie_blk_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/cfg_rx_bar0<31 : 0> on block pcie_blk_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/cfg_rx_xrom<31 : 0> on block pcie_blk_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/mgmt_bwren<3 : 0> on block pcie_blk_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/mgmt_wdata<21 : 16> on block pcie_blk_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   cf_bridge/management_interface/mgmt_wdata_mux0000<21 : 16> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/ll_credit/sub_srl_gen[0].srl_sub_cal2/data<11 : 0> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/ll_credit/sub_srl_gen[0].srl_sub_cal3/data<11 : 0> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/ll_credit/sub_srl_gen[0].srl_sub_cal4/data<11 : 0> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/ll_credit/sub_srl_gen[0].srl_sub_cal6/data<11 : 5> on block
+   pcie_blk_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/rx_bridge/bar_decoder/bar_hit<6 : 0> on block pcie_blk_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ll_bridge/rx_bridge/fifo_inst/trn_rrem<4
+   : 0> on block pcie_blk_if is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ll_bridge/rx_bridge/snk_inst/bar_o<6 :
+   0> on block pcie_blk_if is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/rx_bridge/snk_inst/cur_fulltype<6 : 0> on block pcie_blk_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/rx_bridge/snk_inst/cur_fulltype_mux0000<6 : 0> on block pcie_blk_if
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ll_bridge/rx_bridge/snk_inst/cur_fulltype_oh<7 : 0> on block pcie_blk_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ll_bridge/rx_bridge/snk_inst/rem_q<5 :
+   1> on block pcie_blk_if is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus ll_bridge/rx_bridge/snk_inst/src_rdy_q<5
+   : 1> on block pcie_blk_if is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file sing_chan_cap.edif ...
+ngc2edif: Total memory usage is 91376 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/adc_capture.data/cache/sing_chan_cap_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/adc_capture.data/cache/sing_chan_cap_ngc_zx.edif]
+Release 14.5 - ngc2edif P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design adc_fifo_8bit.ngc ...
+WARNING:NetListWriters:298 - No output is written to adc_fifo_8bit.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file adc_fifo_8bit.edif ...
+ngc2edif: Total memory usage is 79280 kilobytes
+
+Reading core file 'E:/xillybus_adc_capture/adc_capture/ipcore_dir/adc_fifo_8bit.ngc' for (cell view 'adc_fifo_8bit', library 'sing_chan_cap_lib', file 'sing_chan_cap.ngc')
+Parsing EDIF File [./planAhead_run_1/adc_capture.data/cache/adc_fifo_8bit_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/adc_capture.data/cache/adc_fifo_8bit_ngc_zx.edif]
+Release 14.5 - ngc2edif P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design xillybus_core.ngc ...
+WARNING:NetListWriters:298 - No output is written to xillybus_core.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus bar_registers_ins/buf_ctrl_reg[26 : 0]
+   on block xillybus_core is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus bar_registers_ins/dma_bufno_reg[31 : 0]
+   on block xillybus_core is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus messages_ins/msg_buf_real_word[26 : 0]
+   on block xillybus_core is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   messages_ins/msg_buf_real_word_mux0000[26 : 0] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus messages_ins/msg_buf_w0[26 : 0] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   messages_ins/wrbuffer_msg_data_mux0000[31 : 22] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_recv_dma_ins/Madd_rdrq_length_addsub0000_cy[4 : 2] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_recv_dma_ins/Madd_reduce_header_credits_addsub0000_cy[4 : 2] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_recv_dma_ins/Msub_max_readsize_end_offset_addsub0000_cy[5 : 3] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus pcie_recv_dma_ins/rd_byte_offset_d[7 :
+   4] on block xillybus_core is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_recv_dma_ins/rd_byte_offset_d_mux0000[7 : 4] on block xillybus_core is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_send_dma_ins/Madd_wr_first_length_addsub0000_cy[8 : 4] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_v5_request_ins/tlp_compose/header0[30 : 0] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_v5_request_ins/tlp_compose/header1[31 : 0] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_v5_request_ins/tlp_dissect/header0[30 : 0] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_v5_request_ins/tlp_dissect/header1[15 : 0] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   pcie_v5_request_ins/tlp_dissect/header2[10 : 2] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pcie_v5_request_ins/trn32_rd[30 : 0] on
+   block xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file xillybus_core.edif ...
+ngc2edif: Total memory usage is 94000 kilobytes
+
+Reading core file 'E:/xillybus_adc_capture/adc_capture/xillybus_core.ngc' for (cell view 'xillybus_core', library 'sing_chan_cap_lib', file 'sing_chan_cap.ngc')
+Parsing EDIF File [./planAhead_run_1/adc_capture.data/cache/xillybus_core_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/adc_capture.data/cache/xillybus_core_ngc_zx.edif]
+INFO: [Designutils 20-910] Reading macro library E:/Xilinx/14.5/ISE_DS/PlanAhead/data\./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn
+Parsing EDIF File [E:/Xilinx/14.5/ISE_DS/PlanAhead/data\./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn]
+Finished Parsing EDIF File [E:/Xilinx/14.5/ISE_DS/PlanAhead/data\./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn]
+INFO: [Device 21-21] Reading bus macro file E:/Xilinx/14.5/ISE_DS/PlanAhead/data\./parts/xilinx/virtex5/pr_bus_macros.xml
+Loading clock regions from E:/Xilinx/14.5/ISE_DS/PlanAhead/data\parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ClockRegion.xml
+Loading clock buffers from E:/Xilinx/14.5/ISE_DS/PlanAhead/data\parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ClockBuffers.xml
+Loading package from E:/Xilinx/14.5/ISE_DS/PlanAhead/data\parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ff1136/Package.xml
+Loading io standards from E:/Xilinx/14.5/ISE_DS/PlanAhead/data\./parts/xilinx/virtex5/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from E:/Xilinx/14.5/ISE_DS/PlanAhead/data\parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ff1136/SSORules.xml
+Loading list of drcs for the architecture : E:/Xilinx/14.5/ISE_DS/PlanAhead/data\./parts/xilinx/virtex5/drc.xml
+Parsing UCF File [E:/xillybus_adc_capture/adc_capture/ipcore_dir/adc_fifo_8bit.ncf]
+Finished Parsing UCF File [E:/xillybus_adc_capture/adc_capture/ipcore_dir/adc_fifo_8bit.ncf]
+Parsing UCF File [E:/xillybus_adc_capture/adc_capture/sing_chan.ucf]
+Finished Parsing UCF File [E:/xillybus_adc_capture/adc_capture/sing_chan.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 00d9a3d9
+link_design: Time (s): elapsed = 00:01:14 . Memory (MB): peak = 737.602 ; gain = 319.508
+# read_xdl -file "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.ncd"
+Release 14.5 - xdl P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+WARNING:XDL:213 - The resulting xdl output will not have LUT equation strings or RAM INIT strings.
+Loading device for application Rf_Device from file '5vlx110t.nph' in environment E:\Xilinx\14.5\ISE_DS\ISE\.
+   "sing_chan_cap" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
+Successfully converted design 'E:\xillybus_adc_capture\adc_capture\sing_chan_cap.ncd' to 'E:\xillybus_adc_capture\adc_capture\sing_chan_cap.xdl'.
+INFO: [Designutils 20-669] Parsing Placement File : E:/xillybus_adc_capture/adc_capture/sing_chan_cap.ncd
+INFO: [Designutils 20-658] Finished Parsing Placement File : E:/xillybus_adc_capture/adc_capture/sing_chan_cap.ncd
+INFO: [Designutils 20-671] Placed 13268 instances
+read_xdl: Time (s): elapsed = 00:01:03 . Memory (MB): peak = 742.434 ; gain = 4.563
+# if {[catch {read_twx -name results_1 -file "E:/xillybus_adc_capture/adc_capture/sing_chan_cap.twx"} eInfo]} {
+#    puts "WARNING: there was a problem importing \"E:/xillybus_adc_capture/adc_capture/sing_chan_cap.twx\": $eInfo"
+# }
+INFO: [Timing 38-71] No path element with name xillybus_ins/pcie/pcie_ep0/pcie_blk/clocking_i/lock_wait_cntr_7_0<4>_rt found. It will be ignored.
+INFO: [Timing 38-71] No path element with name xillybus_ins/pcie/pcie_ep0/pcie_blk/clocking_i/lock_wait_cntr_15_8<4>_rt found. It will be ignored.
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+ (See E:/xillybus_adc_capture/adc_capture\planAhead_pid6472.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon May 30 16:28:04 2016...
+INFO: [Common 17-83] Releasing license: PlanAhead

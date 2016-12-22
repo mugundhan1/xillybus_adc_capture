@@ -1,0 +1,8 @@
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/adc_fifo_8.v -lang verilog -prj adc_capture -o adc_8_fifo.spl -module adc_8_fifo -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 adc_8_fifo.spl E:/xillybus_adc_capture/adc_capture/adc_8_fifo.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/adc_fifo_8.v -lang verilog -prj adc_capture -o adc_8_fifo.spl -module adc_8_fifo -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 adc_8_fifo.spl E:/xillybus_adc_capture/adc_capture/adc_8_fifo.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/adc_fifo_8.v -lang verilog -prj adc_capture -o adc_8_fifo.spl -module adc_8_fifo -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 adc_8_fifo.spl E:/xillybus_adc_capture/adc_capture/adc_8_fifo.sym 
+vhdtdtfi -lib work E:/xillybus_adc_capture/adc_capture/adc_fifo_8.v -lang verilog -prj adc_capture -o adc_8_fifo.spl -module adc_8_fifo -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 adc_8_fifo.spl E:/xillybus_adc_capture/adc_capture/adc_8_fifo.sym 

@@ -1,0 +1,1 @@
+ -p virtex5 -lang verilog$(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT) -msg __xps/ise/xmsgprops.lst -s isim -X E:/Control_Module_Prototype/uBlaze_Example_Design/Blaze_1/

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/xillybus_adc_capture/adc_capture/byte_reorder_isim_beh.exe" -prj "E:/xillybus_adc_capture/adc_capture/byte_reorder_beh.prj" "work.byte_reorder" "work.glbl" 

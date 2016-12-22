@@ -1,0 +1,187 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.5
+//  \   \         Application : sch2hdl
+//  /   /         Filename : capture_2ch_top.vf
+// /___/   /\     Timestamp : 06/15/2016 13:25:57
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/ipcore_dir -intstyle ise -family virtex5 -verilog E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.vf -w E:/xillybus_adc_capture/ad9284_2ch_capture/capture_2ch/capture_2ch_top.sch
+//Design Name: capture_2ch_top
+//Device: virtex5
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module IFD8_HXILINX_capture_2ch_top(Q, C, D);
+
+   
+   output [7:0]       Q;
+
+   input 	      C;	
+   input  [7:0]       D;
+   
+   reg    [7:0]       Q;
+
+    (* IOB = "TRUE" *)
+   
+   always @(posedge C)
+     begin
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module capture_2ch_top(dco_n, 
+                       dco_p, 
+                       din_n, 
+                       din_p, 
+                       fifo_rst, 
+                       PCIE_PERST_B_LS, 
+                       PCIE_REFCLK_N, 
+                       PCIE_REFCLK_P, 
+                       PCIE_RX0_N, 
+                       PCIE_RX0_P, 
+                       GPIO_LED, 
+                       locked, 
+                       PCIE_TX0_N, 
+                       PCIE_TX0_P, 
+                       quiesce);
+
+    input dco_n;
+    input dco_p;
+    input [5:0] din_n;
+    input [5:0] din_p;
+    input fifo_rst;
+    input PCIE_PERST_B_LS;
+    input PCIE_REFCLK_N;
+    input PCIE_REFCLK_P;
+    input PCIE_RX0_N;
+    input PCIE_RX0_P;
+   output [3:0] GPIO_LED;
+   output locked;
+   output PCIE_TX0_N;
+   output PCIE_TX0_P;
+   output quiesce;
+   
+   wire dclk;
+   wire [5:0] XLXN_1;
+   wire [5:0] XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire [7:0] XLXN_21;
+   wire [7:0] XLXN_22;
+   wire [7:0] XLXN_24;
+   wire [7:0] XLXN_25;
+   wire XLXN_30;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_38;
+   wire XLXN_39;
+   wire [31:0] XLXN_50;
+   wire [31:0] XLXN_51;
+   wire [31:0] XLXN_52;
+   wire [31:0] XLXN_53;
+   wire XLXN_58;
+   
+   assign XLXN_3 = 0;
+   assign XLXN_4 = 0;
+   assign XLXN_5 = 0;
+   assign XLXN_6 = 0;
+   busmaker  bmch1 (.din(XLXN_1[5:0]), 
+                   .d0(XLXN_6), 
+                   .d1(XLXN_5), 
+                   .dout(XLXN_21[7:0]));
+   busmaker  bmch2 (.din(XLXN_2[5:0]), 
+                   .d0(XLXN_4), 
+                   .d1(XLXN_3), 
+                   .dout(XLXN_22[7:0]));
+   ch_fifo_wrap  ch1 (.din(XLXN_24[7:0]), 
+                     .rd_clk(XLXN_36), 
+                     .rd_en(XLXN_38), 
+                     .rst(fifo_rst), 
+                     .wr_clk(XLXN_30), 
+                     .wr_en(XLXN_58), 
+                     .dout(XLXN_53[31:0]), 
+                     .empty(XLXN_35), 
+                     .full());
+   ch_fifo_wrap  ch2 (.din(XLXN_25[7:0]), 
+                     .rd_clk(XLXN_36), 
+                     .rd_en(XLXN_39), 
+                     .rst(fifo_rst), 
+                     .wr_clk(XLXN_30), 
+                     .wr_en(XLXN_58), 
+                     .dout(XLXN_52[31:0]), 
+                     .empty(XLXN_34), 
+                     .full());
+   ad9284_fe  fe1 (.dco(dclk), 
+                  .din_n(din_n[5:0]), 
+                  .din_p(din_p[5:0]), 
+                  .dch1(XLXN_1[5:0]), 
+                  .dch2(XLXN_2[5:0]));
+   xillybus  xillybus_ins (.PCIE_PERST_B_LS(PCIE_PERST_B_LS), 
+                          .PCIE_REFCLK_N(PCIE_REFCLK_N), 
+                          .PCIE_REFCLK_P(PCIE_REFCLK_P), 
+                          .PCIE_RX0_N(PCIE_RX0_N), 
+                          .PCIE_RX0_P(PCIE_RX0_P), 
+                          .user_r_ch1_read_data(XLXN_50[31:0]), 
+                          .user_r_ch1_read_empty(XLXN_35), 
+                          .user_r_ch1_read_eof(), 
+                          .user_r_ch2_read_data(XLXN_51[31:0]), 
+                          .user_r_ch2_read_empty(XLXN_34), 
+                          .user_r_ch2_read_eof(), 
+                          .user_r_mem_8_data(), 
+                          .user_r_mem_8_empty(), 
+                          .user_r_mem_8_eof(), 
+                          .user_w_mem_8_full(), 
+                          .bus_clk(XLXN_36), 
+                          .GPIO_LED(GPIO_LED[3:0]), 
+                          .PCIE_TX0_N(PCIE_TX0_N), 
+                          .PCIE_TX0_P(PCIE_TX0_P), 
+                          .quiesce(quiesce), 
+                          .user_mem_8_addr(), 
+                          .user_mem_8_addr_update(), 
+                          .user_r_ch1_read_open(), 
+                          .user_r_ch1_read_rden(XLXN_38), 
+                          .user_r_ch2_read_open(), 
+                          .user_r_ch2_read_rden(XLXN_39), 
+                          .user_r_mem_8_open(), 
+                          .user_r_mem_8_rden(), 
+                          .user_w_mem_8_data(), 
+                          .user_w_mem_8_open(), 
+                          .user_w_mem_8_wren());
+   INV  XLXI_19 (.I(dclk), 
+                .O(XLXN_30));
+   (* HU_SET = "XLXI_20_0" *) 
+   IFD8_HXILINX_capture_2ch_top  XLXI_20 (.C(dclk), 
+                                         .D(XLXN_21[7:0]), 
+                                         .Q(XLXN_24[7:0]));
+   (* HU_SET = "XLXI_21_1" *) 
+   IFD8_HXILINX_capture_2ch_top  XLXI_21 (.C(dclk), 
+                                         .D(XLXN_22[7:0]), 
+                                         .Q(XLXN_25[7:0]));
+   byte_reorder_8bit  XLXI_25 (.data_in(XLXN_52[31:0]), 
+                              .data_out(XLXN_51[31:0]));
+   byte_reorder_8bit  XLXI_26 (.data_in(XLXN_53[31:0]), 
+                              .data_out(XLXN_50[31:0]));
+   capture_control  XLXI_28 (.dclk(dclk), 
+                            .dv(XLXN_58));
+   pll  XLXI_31 (.CLKIN_N_IN(dco_n), 
+                .CLKIN_P_IN(dco_p), 
+                .RST_IN(), 
+                .CLKIN_IBUFGDS_OUT(), 
+                .CLKOUT0_OUT(dclk), 
+                .LOCKED_OUT(locked));
+endmodule
